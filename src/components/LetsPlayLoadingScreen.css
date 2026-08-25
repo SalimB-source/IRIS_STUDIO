@@ -1,0 +1,204 @@
+/* Transition Let’s Play : typographie violette et jaune, pensée comme une entrée en scène. */
+.letsplay-loading-screen {
+  position: fixed;
+  z-index: 999;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+  background: #281347;
+  color: #fffaf2;
+  opacity: 1;
+  transition: opacity 260ms cubic-bezier(.23, 1, .32, 1), visibility 260ms cubic-bezier(.23, 1, .32, 1);
+}
+
+.letsplay-loading-screen::before,
+.letsplay-loading-screen::after {
+  position: absolute;
+  border-radius: 50%;
+  content: "";
+}
+
+.letsplay-loading-screen::before {
+  top: -32vw;
+  left: -11vw;
+  width: min(65vw, 56rem);
+  height: min(65vw, 56rem);
+  border: 1px solid rgba(252, 202, 53, .4);
+}
+
+.letsplay-loading-screen::after {
+  right: -26vw;
+  bottom: -35vw;
+  width: min(71vw, 64rem);
+  height: min(71vw, 64rem);
+  border: 1px solid rgba(255, 250, 242, .18);
+}
+
+.letsplay-loading-screen.is-exiting { visibility: hidden; opacity: 0; pointer-events: none; }
+
+.letsplay-loading-grid {
+  position: absolute;
+  inset: 0;
+  opacity: .18;
+  background-image: linear-gradient(rgba(255, 255, 255, .12) 1px, transparent 1px), linear-gradient(90deg, rgba(255, 255, 255, .12) 1px, transparent 1px);
+  background-size: 3.75rem 3.75rem;
+  mask-image: linear-gradient(90deg, transparent, black 38%, black 70%, transparent);
+}
+
+.letsplay-loading-beam {
+  position: absolute;
+  width: min(112vw, 110rem);
+  height: min(28vw, 24rem);
+  border: 1px solid rgba(252, 202, 53, .46);
+  border-radius: 50%;
+  transform: rotate(-22deg);
+}
+
+.letsplay-loading-beam i {
+  position: absolute;
+  border: 1px solid rgba(255, 255, 255, .25);
+  border-radius: inherit;
+}
+
+.letsplay-loading-beam i:nth-child(1) { inset: 18%; }
+.letsplay-loading-beam i:nth-child(2) { inset: 40%; }
+.letsplay-loading-beam i:nth-child(3) {
+  top: 49%;
+  left: -16%;
+  width: 58%;
+  height: 2px;
+  border: 0;
+  background: #fcca35;
+}
+
+.letsplay-loading-content {
+  position: relative;
+  z-index: 2;
+  display: grid;
+  justify-items: center;
+  width: min(30rem, calc(100% - 3rem));
+}
+
+.letsplay-loading-kicker,
+.letsplay-loading-label,
+.letsplay-loading-status {
+  font-family: "Manrope", Arial, sans-serif;
+  font-size: .56rem;
+  font-weight: 800;
+  letter-spacing: .16em;
+  text-transform: uppercase;
+}
+
+.letsplay-loading-kicker { margin: 0 0 1.45rem; color: #fcca35; }
+
+.letsplay-loading-wordmark {
+  position: relative;
+  display: grid;
+  justify-items: center;
+  width: min(25rem, 86vw);
+  padding: .85rem 0 1.1rem;
+  filter: drop-shadow(0 1rem 1.2rem rgba(12, 3, 27, .42));
+}
+
+.letsplay-loading-word {
+  display: block;
+  font-family: "Manrope", Arial, sans-serif;
+  font-weight: 900;
+  line-height: .71;
+  letter-spacing: -.11em;
+  text-transform: uppercase;
+}
+
+.letsplay-loading-word--lets {
+  z-index: 1;
+  margin-left: -1.2rem;
+  color: #fffaf2;
+  font-size: clamp(3.75rem, 13vw, 6.5rem);
+  font-style: italic;
+  transform: skewX(-10deg);
+  text-shadow: .08em .08em 0 #50269a, .11em .11em 0 rgba(20, 7, 46, .7);
+}
+
+.letsplay-loading-word--play {
+  z-index: 2;
+  margin-top: -.08rem;
+  margin-left: 1.55rem;
+  color: #fcca35;
+  font-size: clamp(4.9rem, 17vw, 8.5rem);
+  font-style: italic;
+  transform: skewX(-10deg);
+  text-shadow: .07em .07em 0 #5627a6, .11em .11em 0 rgba(20, 7, 46, .78);
+}
+
+.letsplay-loading-swoosh {
+  position: absolute;
+  right: 6%;
+  bottom: .35rem;
+  width: 46%;
+  height: .4rem;
+  border-radius: 999px;
+  background: #fffaf2;
+  box-shadow: .55rem .55rem 0 #fcca35;
+  transform: skewX(-32deg);
+}
+
+.letsplay-loading-label { margin: 1.35rem 0 0; color: #fffaf2; }
+
+.letsplay-loading-progress {
+  width: min(17rem, 75vw);
+  height: 3px;
+  margin-top: 2.3rem;
+  overflow: hidden;
+  background: rgba(255, 255, 255, .26);
+}
+
+.letsplay-loading-progress i {
+  display: block;
+  width: 100%;
+  height: 100%;
+  transform: translateX(-100%);
+  background: linear-gradient(90deg, #fcca35, #fffaf2);
+}
+
+.letsplay-loading-status {
+  display: flex;
+  justify-content: space-between;
+  width: min(17rem, 75vw);
+  margin: .72rem 0 0;
+  color: rgba(255, 250, 242, .72);
+}
+
+.letsplay-loading-status b { color: #fcca35; font-weight: 800; }
+.letsplay-loading-screen.is-exiting .letsplay-loading-content { opacity: 0; transform: translateY(-.5rem); transition: transform 240ms cubic-bezier(.23, 1, .32, 1), opacity 240ms cubic-bezier(.23, 1, .32, 1); }
+
+@media (prefers-reduced-motion: no-preference) {
+  .letsplay-loading-word--lets { animation: letsplay-word-lets .52s .1s cubic-bezier(.23, 1, .32, 1) both; }
+  .letsplay-loading-word--play { animation: letsplay-word-play .58s .24s cubic-bezier(.23, 1, .32, 1) both; }
+  .letsplay-loading-swoosh { animation: letsplay-swoosh .42s .66s cubic-bezier(.23, 1, .32, 1) both; }
+  .letsplay-loading-progress i { animation: letsplay-loader-progress 2.1s cubic-bezier(.23, 1, .32, 1) forwards; }
+}
+
+@keyframes letsplay-word-lets { from { opacity: 0; transform: translateX(-1.4rem) skewX(-10deg); } to { opacity: 1; transform: translateX(0) skewX(-10deg); } }
+@keyframes letsplay-word-play { from { opacity: 0; transform: translateX(1.7rem) translateY(.45rem) skewX(-10deg); } to { opacity: 1; transform: translateX(0) translateY(0) skewX(-10deg); } }
+@keyframes letsplay-swoosh { from { opacity: 0; transform: translateX(-2rem) skewX(-32deg); } to { opacity: 1; transform: translateX(0) skewX(-32deg); } }
+@keyframes letsplay-loader-progress { to { transform: translateX(0); } }
+
+@media (max-width: 600px) {
+  .letsplay-loading-screen::before { top: -35vw; left: -64vw; width: 118vw; height: 118vw; }
+  .letsplay-loading-screen::after { right: -68vw; bottom: -22vw; width: 133vw; height: 133vw; }
+  .letsplay-loading-beam { width: 147vw; height: 58vw; }
+  .letsplay-loading-grid { background-size: 2.7rem 2.7rem; }
+  .letsplay-loading-kicker { margin-bottom: 1.2rem; }
+  .letsplay-loading-wordmark { width: min(20rem, 90vw); }
+  .letsplay-loading-progress { margin-top: 2rem; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .letsplay-loading-screen,
+  .letsplay-loading-screen.is-exiting .letsplay-loading-content { transition-duration: 80ms; }
+  .letsplay-loading-word--lets,
+  .letsplay-loading-word--play,
+  .letsplay-loading-swoosh,
+  .letsplay-loading-progress i { animation: none; transform: none; }
+}

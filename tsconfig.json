@@ -1,0 +1,17 @@
+{
+  "include": ["src/**/*"],
+  "exclude": ["node_modules", "dist", "**/*.test.ts", "**/*.test.tsx", "src/_core/**/*", "src/lib/trpc.ts", "src/const.ts", "src/components/AIChatBox.tsx", "src/components/DashboardLayout.tsx", "src/components/DashboardLayoutSkeleton.tsx", "src/pages/ComponentShowcase.tsx"],
+  "compilerOptions": {
+    "noEmit": true,
+    "module": "ESNext",
+    "strict": true,
+    "lib": ["esnext", "dom", "dom.iterable"],
+    "jsx": "preserve",
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "moduleResolution": "bundler",
+    "baseUrl": ".",
+    "types": ["node", "vite/client"],
+    "paths": { "@/*": ["./src/*"] }
+  }
+}

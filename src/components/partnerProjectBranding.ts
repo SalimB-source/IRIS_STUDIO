@@ -1,0 +1,16 @@
+export const partnerProjectBranding = {
+  letsPlay: {
+    name: "Let’s Play",
+    logo: "assets/lets-play-logo-provided_dfd031ae.png",
+    alt: "Logo Let’s Play",
+    thumbnail: "assets/letsplay-thumbnail-provided_3ed67485.png",
+    thumbnailAlt: "Visuel Let’s Play dédié au gaming, à la pop culture et à la technologie",
+  },
+  sevenArena: {
+    name: "7ouma Arena",
+    logo: "assets/7ouma-arena-official-avatar_b7cba369.png",
+    alt: "Emblème officiel 7ouma Arena",
+    thumbnail: "assets/7ouma-arena-thumbnail-provided_3c766c97.png",
+    thumbnailAlt: "Visuel 7ouma Arena dédié à l’émission e-sport par Djezzy",
+  },
+} as const;

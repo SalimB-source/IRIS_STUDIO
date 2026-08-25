@@ -1,0 +1,34 @@
+/* Repères temporaires : les portraits seront réintroduits quand les photos validées seront disponibles. */
+.about-person-placeholder { display: flex; width: min(100%, 12.5rem); aspect-ratio: 1; margin-inline: auto; align-items: center; justify-content: center; gap: .58rem; overflow: hidden; border: 1px solid currentColor; border-radius: 50%; color: #e7433a; background: linear-gradient(135deg, rgba(231,67,58,.11), rgba(242,138,67,.05)); }
+.about-person-placeholder svg { flex: 0 0 auto; }
+.about-person-placeholder span { font-size: .52rem; font-weight: 800; letter-spacing: .1em; text-transform: uppercase; }
+.about-letsplay-member .about-person-placeholder { width: 8rem; min-height: 0; margin: 1.2rem 0 1.45rem; }
+.about-letsplay-member > .about-person-placeholder + .about-role-badge { margin: 0 0 .45rem; }
+.about-person-card .about-person-placeholder { width: min(100%, 12.5rem); min-height: 0; margin: 1rem auto 1.45rem; color: #202020; background: linear-gradient(135deg, #f7f2ec, #e8dfd6); }
+.about-studio-member .about-person-placeholder { width: 5.7rem; height: 5.7rem; margin: 1.2rem 0 1.4rem; border: 2px solid #202020; border-radius: 50%; color: #e7433a; background: #202020; }
+.about-studio-member .about-person-placeholder span { display: none; }
+.about-letsplay-member-format { margin-top: 1rem; border-top: 1px solid rgba(32,32,32,.18); padding-top: .85rem; }.about-letsplay-member-format > span { display: block; color: #9b6700; font-size: .5rem; font-weight: 800; letter-spacing: .11em; text-transform: uppercase; }.about-letsplay-member-format p { margin: .42rem 0 0; color: #4c4c4c; font-size: .7rem; line-height: 1.65; }.about-letsplay-member:hover .about-letsplay-member-format { border-color: rgba(255,255,255,.24); }.about-letsplay-member:hover .about-letsplay-member-format > span { color: #fcca35; }.about-letsplay-member:hover .about-letsplay-member-format p { color: rgba(247,252,255,.78); }
+.about-letsplay-member-actions { display: flex; flex-direction: column; align-items: flex-start; gap: .8rem; margin-top: auto; padding-top: 1.3rem; }.about-letsplay-member-episode-link { display: inline-flex; align-items: center; gap: .38rem; border: 1px solid #e7433a; padding: .5rem .58rem; background: #e7433a; color: #fff; font-size: .5rem; font-weight: 800; letter-spacing: .065em; line-height: 1.35; text-transform: uppercase; transition: background 160ms cubic-bezier(.23,1,.32,1), color 160ms cubic-bezier(.23,1,.32,1), transform 160ms cubic-bezier(.23,1,.32,1); }.about-letsplay-member-episode-link:hover { border-color: #202020; background: #202020; color: #fff; }.about-letsplay-member-episode-link:focus-visible { outline: 2px solid #f28a43; outline-offset: 3px; }.about-letsplay-member-episode-link:active { transform: scale(.97); }.about-letsplay-member .about-letsplay-member-actions :is(.about-letsplay-member-link,.about-letsplay-member-pending) { margin-top: 0; padding-top: 0; }.about-letsplay-member:hover .about-letsplay-member-episode-link { border-color: #fcca35; background: #fcca35; color: #202020; }.dark .about-letsplay-member-episode-link { border-color: #fcca35; background: #fcca35; color: #202020; }
+.about-letsplay-member-episode-link,
+.about-letsplay-member:hover .about-letsplay-member-episode-link,
+.dark .about-letsplay-member-episode-link { border-color: #e7433a !important; background: #e7433a !important; color: #fff !important; }
+.about-letsplay-member-episode-link :is(span,svg) { color: #fff !important; }
+.about-letsplay-member-episode-link:hover,
+.dark .about-letsplay-member-episode-link:hover { border-color: #c9352e !important; background: #c9352e !important; color: #fff !important; }
+.about-letsplay-member-episode-link[data-loading="true"] { border-color: #c9352e !important; background: #c9352e !important; cursor: progress; pointer-events: none; }
+.about-letsplay-member-episode-spinner { animation: about-letsplay-episode-spin .62s linear infinite; }
+@keyframes about-letsplay-episode-spin { to { transform: rotate(360deg); } }
+.dark .about-person-placeholder { color: #f28a43; background: linear-gradient(135deg, rgba(242,138,67,.15), rgba(231,67,58,.07)); }
+.dark .about-letsplay-member-format { border-color: rgba(247,252,255,.24); }.dark .about-letsplay-member-format > span { color: #fcca35 !important; }.dark .about-letsplay-member-format p { color: rgba(247,252,255,.78) !important; }
+
+@media (max-width: 640px) {
+  .about-letsplay-member .about-person-placeholder { width: 7.5rem; }
+  .about-person-card .about-person-placeholder { width: 9rem; }
+  .about-studio-member .about-person-placeholder { width: 6rem; height: 6rem; }
+  .about-letsplay-member-format p { font-size: .67rem; }
+  .about-letsplay-member-episode-link { max-width: 100%; font-size: .48rem; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .about-letsplay-member-episode-spinner { animation: none; }
+}

@@ -1,0 +1,11 @@
+/* Navigation bureau : des repères plus distincts, sans encombrer les formats intermédiaires. */
+@media (min-width: 981px) {
+  .site-header .desktop-nav {
+    gap: clamp(1.3rem, 2.2vw, 3rem);
+    margin-right: clamp(1.35rem, 2.35vw, 3.2rem);
+  }
+
+  .site-header .desktop-nav > a {
+    padding-inline: .08rem;
+  }
+}
