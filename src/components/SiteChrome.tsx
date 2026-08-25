@@ -18,7 +18,7 @@ const navigation = [
   { href: "/contact", label: "Contact" },
 ];
 
-const IRIS_NAV_LOGO = "assets/1000083810_fa866568.png";
+const IRIS_NAV_LOGO = "assets/iris-nav-logo-light-static-provided.png";
 const IRIS_NAV_LOGO_WHITE = "assets/iris-nav-logo-white_70ab914f.svg";
 const IRIS_LOGO_WHITE = "assets/IRISSTUDIOnewwhite_02120a7f.svg";
 

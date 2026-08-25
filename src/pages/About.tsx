@@ -141,11 +141,9 @@ export const leadership = [
     name: "Hadjer Mezhoud",
     role: "Responsable administratif et financier",
     text: "Responsable administratif et financier d’Iris Studio, selon l’intitulé professionnel communiqué pour cette fiche.",
-portrait: "assets/hadjer-mezhoud.jpg",
-alt: "Portrait public de Hadjer Mezhoud",
-
+    portrait: "assets/hadjer-mezhoud.jpg",
+    alt: "Portrait public de Hadjer Mezhoud",
     profile: "https://www.linkedin.com/in/hadjer-mezhoud-a95b9969",
-    alt: "Portrait de Hadjer Mezhoud à venir",
     roleIcon: "direction" as const,
   },
 ];
