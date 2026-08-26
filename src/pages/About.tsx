@@ -514,8 +514,12 @@ export default function About() {
           </div>
             <div className="about-client-dossier">
               <p className="about-client-source">DOSSIER / MARQUES CITÉES PAR LA PRÉSENTATION PUBLIQUE D’IRIS STUDIO</p>
-              <div className="about-client-grid about-client-grid--logos" aria-label="Logos des marques citées par Iris Studio">
-                {brandPartners.map((client, index) => <span key={client.name}><i>{String(index + 1).padStart(2, "0")}</i><img src={client.logo} alt={`Logo ${client.name}`} loading="lazy" decoding="async" /></span>)}
+              <div className="about-client-marquee" aria-label="Logos des marques citées par Iris Studio">
+                <div className="about-client-marquee-track">
+                  {[0, 1].map((setIndex) => <div className="about-client-marquee-set" aria-hidden={setIndex === 1} key={setIndex}>
+                    {brandPartners.map((client) => <span key={`${client.name}-${setIndex}`}><img src={client.logo} alt={setIndex === 0 ? `Logo ${client.name}` : ""} loading="lazy" decoding="async" /></span>)}
+                  </div>)}
+                </div>
               </div>
             </div>
         </section>
