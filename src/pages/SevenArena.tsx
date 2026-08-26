@@ -21,7 +21,6 @@ import {
   sevenArenaCredits,
   sevenArenaDossiers,
   sevenArenaEcosystem,
-  sevenArenaMentionedGuests,
   sevenArenaScreenings,
   sevenArenaVisualFilters,
   sevenArenaVisuals,
@@ -371,12 +370,16 @@ export default function SevenArena() {
               </h2>
             </div>
             <p>
-              Cette sélection réunit les créateurs et intervenants dont un portrait public de réseau social a été vérifié. Les miniatures YouTube ne sont plus utilisées comme photo de personne.
+              Créateurs, joueurs, casters et invités réunis dans une même galerie. Chaque carte s’appuie sur un portrait ou un visuel public attribuable aux contenus de 7ouma Arena.
             </p>
+          </div>
+          <div className="arena-voices-roster-note" aria-label={`${sevenArenaVoices.length} profils dans la galerie`}>
+            <span>ROSTER / {String(sevenArenaVoices.length).padStart(2, "0")} PROFILS</span>
+            <p>Une sélection visuelle pensée comme un mur de jeu : chaque voix est maintenant visible au même niveau que le format qu’elle anime.</p>
           </div>
           <div className="arena-voices-grid">
             {sevenArenaVoices.map((voice, index) => (
-              <a className="arena-voice" href={voice.href} target="_blank" rel="noreferrer" key={voice.id}>
+              <a className={`arena-voice arena-voice--${voice.id}`} href={voice.href} target="_blank" rel="noreferrer" key={voice.id} aria-label={`Consulter la source publique de ${voice.name}`}>
                 <figure>
                   <img src={voice.image} alt={voice.imageAlt} />
                   <figcaption>{voice.imageNote}</figcaption>
@@ -390,20 +393,6 @@ export default function SevenArena() {
               </a>
               ))}
             </div>
-            <aside className="arena-voices-guest-list" aria-labelledby="arena-voices-guests-title">
-              <p className="eyebrow" id="arena-voices-guests-title">Autres participants cités</p>
-              <p>
-                Également présents dans les épisodes officiels ; ils restent cités sans image tant qu’un portrait social humain attribuable n’a pas été retenu.
-              </p>
-              <ul>
-                {sevenArenaMentionedGuests.map((guest) => (
-                  <li key={guest.name}>
-                    <strong>{guest.name}</strong>
-                    <span>{guest.role}</span>
-                  </li>
-                ))}
-              </ul>
-            </aside>
           </section>
 
         <section className="detail-links section-pad">
