@@ -36,6 +36,12 @@
 .art-project-media-arena img { width: min(59%,13rem); border-radius: 50%; box-shadow: 0 1.1rem 2.7rem rgba(0,0,0,.48); }
 @media (max-width: 640px) { .art-project-media-brand { min-height: 15rem; }.art-project-media-brand img { width: min(82%,17rem); }.art-project-media-arena img { width: min(50%,10rem); } }
 
+/* Images partenaires : le visuel demeure seul, sans cadre ni fond ajouté. */
+.art-project-media-bare { min-height: 0; padding: 0; border: 0; border-radius: 1.25rem; background: transparent; box-shadow: none; }
+.art-project-media-bare::before,.art-project-media-bare::after { display: none; }
+.art-project-media-bare img { width: 100%; height: 100%; aspect-ratio: 1 / 1.08; border-radius: inherit; box-shadow: none; object-fit: cover; }
+@media (max-width: 640px) { .art-project-media-bare { max-width: 19rem; border-radius: 1rem; }.art-project-media-bare img { aspect-ratio: 1.16 / 1; } }
+
 
 /* Trois fragments générés prolongent discrètement la texture visuelle du dernier appel à l’action. */
 .art-contact { isolation: isolate; overflow: hidden; }
