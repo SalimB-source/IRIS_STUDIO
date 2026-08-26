@@ -1,3 +1,4 @@
+/* Import fidèle IRIS Studio : cette feuille ou ce composant conserve le langage éditorial et immersif du dépôt source. */
 /* Repères temporaires : les portraits seront réintroduits quand les photos validées seront disponibles. */
 .about-person-placeholder { display: flex; width: min(100%, 12.5rem); aspect-ratio: 1; margin-inline: auto; align-items: center; justify-content: center; gap: .58rem; overflow: hidden; border: 1px solid currentColor; border-radius: 50%; color: #e7433a; background: linear-gradient(135deg, rgba(231,67,58,.11), rgba(242,138,67,.05)); }
 .about-person-placeholder svg { flex: 0 0 auto; }

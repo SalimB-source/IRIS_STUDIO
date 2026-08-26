@@ -1,3 +1,4 @@
+/* Import fidèle IRIS Studio : cette feuille ou ce composant conserve le langage éditorial et immersif du dépôt source. */
 /* Lancement Iris : une icône d’objectif pivote à droite, à gauche puis légèrement à droite avant l’apparition du logo. */
 .launch-screen { position: fixed; z-index: 120; inset: 0; display: grid; place-items: center; overflow: hidden; background: #202020; color: #fbfaf8; opacity: 1; transition: opacity 360ms cubic-bezier(.23,1,.32,1),visibility 360ms cubic-bezier(.23,1,.32,1); }
 .launch-screen::before,.launch-screen::after { position: absolute; border: 1px solid rgba(242,138,67,.3); border-radius: 50%; content: ""; }.launch-screen::before { top: -30%; left: -9%; width: 54vw; height: 54vw; }.launch-screen::after { right: -19%; bottom: -41%; width: 66vw; height: 66vw; border-color: rgba(231,67,58,.28); }.launch-screen.is-exiting { visibility: hidden; opacity: 0; pointer-events: none; }

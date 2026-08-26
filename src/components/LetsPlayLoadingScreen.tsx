@@ -1,3 +1,4 @@
+/* Import fidèle IRIS Studio : cette feuille ou ce composant conserve le langage éditorial et immersif du dépôt source. */
 import { useEffect, useState } from "react";
 import { createPortal } from "react-dom";
 import { getLetsPlayExitDelay, getLetsPlayTransitionDuration } from "./letsPlayTransitionConfig";

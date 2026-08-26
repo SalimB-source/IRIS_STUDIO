@@ -1,3 +1,4 @@
+/* Import fidèle IRIS Studio : cette feuille ou ce composant conserve le langage éditorial et immersif du dépôt source. */
 export const partnerProjectPaths = ["/projets/lets-play", "/projets/7ouma-arena"] as const;
 
 export const pageScrollTop = {

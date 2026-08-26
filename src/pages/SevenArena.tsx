@@ -1,3 +1,4 @@
+/* Import fidèle IRIS Studio : cette feuille ou ce composant conserve le langage éditorial et immersif du dépôt source. */
 /**
  * Direction « Portfolio Iris » : 7ouma Arena est présenté comme une étude de cas,
  * avec des archives officielles cadrées par Iris. Chaque média conserve sa provenance
@@ -175,7 +176,7 @@ export default function SevenArena() {
 
         <section id="arena-attribution" className="arena-attribution section-pad project-progress-target" aria-labelledby="arena-attribution-title">
           <div className="arena-attribution-signal" aria-hidden="true">
-            <img src="assets/Djezzy_Logo_2015_1b45af1e.svg" alt="" />
+            <img src="/assets/Djezzy_Logo_2015_1b45af1e.svg" alt="" />
           </div>
 
           <div className="arena-attribution-main">
@@ -264,7 +265,7 @@ export default function SevenArena() {
           </div>
           <aside className="arena-ecosystem-partnership" aria-label="Collaboration entre Egor Gaming et 7ouma Arena">
             <figure className="arena-egor-logo">
-              <img src="assets/egor-logo-provided_7f6b1b02.png" alt="Logo EGOR Gaming" />
+              <img src="/assets/egor-logo-provided_7f6b1b02.png" alt="Logo EGOR Gaming" />
             </figure>
             <span aria-hidden="true">×</span>
             <strong aria-hidden="true">7A</strong>
@@ -274,7 +275,7 @@ export default function SevenArena() {
         <section className="detail-framework section-pad">
           <figure className="detail-framework-image">
             <span className="detail-archive-index">ARCHIVE / 02</span>
-            <img src="assets/7ouma-free-fire_695c5d6f.jpg" alt="Free Fire Hangout, publication 7ouma Arena" />
+            <img src="/assets/7ouma-free-fire_695c5d6f.jpg" alt="Free Fire Hangout, publication 7ouma Arena" />
             <figcaption>Preuve terrain / 7ouma Arena — Free Fire Hangout</figcaption>
           </figure>
           <div className="detail-framework-copy">

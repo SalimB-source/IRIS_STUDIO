@@ -1,3 +1,4 @@
+/* Import fidèle IRIS Studio : cette feuille ou ce composant conserve le langage éditorial et immersif du dépôt source. */
 /* Direction « Portfolio Iris » : la preuve terrain est une archive encadrée ; l’œil-prisme sert de route de lecture. */
 .about-origin::before { position: absolute; top: 0; bottom: 0; left: clamp(1.5rem, 6vw, 7rem); width: 1px; background: linear-gradient(#e7433a 0 16%, rgba(231,67,58,.16) 16% 100%); content: ""; }
 .about-principles { position: relative; }.about-principles::before { position: absolute; top: 0; left: clamp(1.5rem, 6vw, 7rem); width: min(18rem,33vw); height: 2px; background: linear-gradient(90deg,#e7433a 0 72%,#f28a43 72% 100%); content: ""; }

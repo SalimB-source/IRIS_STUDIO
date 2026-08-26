@@ -1,3 +1,4 @@
+/* Import fidèle IRIS Studio : cette feuille ou ce composant conserve le langage éditorial et immersif du dépôt source. */
 export const SEVEN_ARENA_PROJECT_PATH = "/projets/7ouma-arena";
 
 export function getSevenArenaTransitionDuration(reducedMotion: boolean) {

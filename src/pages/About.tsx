@@ -1,3 +1,4 @@
+/* Import fidèle IRIS Studio : cette feuille ou ce composant conserve le langage éditorial et immersif du dépôt source. */
 /**
  * Direction « Portfolio Iris » : page À propos blanche, rouge Iris et orange signal.
  * La narration emploie les faits institutionnels vérifiables, présente la direction avec portraits publics
@@ -79,7 +80,7 @@ export const backstageGallery = [
     index: "ARCHIVE / 01",
     title: "Préparer le point de vente.",
     description: "Exécution retail et suivi de merchandising autour d’un présentoir Jumbo Noodles.",
-    image: "assets/gbfoods-retail-execution_e4762b3b.jpg",
+    image: "/assets/gbfoods-retail-execution_e4762b3b.jpg",
     alt: "Intervention de merchandising sur un présentoir Jumbo Noodles, archive LinkedIn Iris Studio fournie.",
     source: "GBfoods Algeria · archive LinkedIn Iris Studio fournie",
     layout: "retail",
@@ -89,7 +90,7 @@ export const backstageGallery = [
     index: "ARCHIVE / 02",
     title: "Composer un espace de marque.",
     description: "Dispositif Holcim El-Djazaïr présenté au Salon International des Travaux Publics 2024.",
-    image: "assets/holcim-sitp-stand_cd9587e2.jpg",
+    image: "/assets/holcim-sitp-stand_cd9587e2.jpg",
     alt: "Stand Holcim El-Djazaïr au Salon International des Travaux Publics 2024, archive LinkedIn Iris Studio fournie.",
     source: "Holcim / SITP 2024 · archive LinkedIn Iris Studio fournie",
     layout: "panorama",
@@ -99,7 +100,7 @@ export const backstageGallery = [
     index: "ARCHIVE / 03",
     title: "Déployer dans la ville.",
     description: "Activation Djezzy déployée sur le terrain avec un dispositif visible au contact du public.",
-    image: "assets/djezzy-trade-activation_1642adb5.jpg",
+    image: "/assets/djezzy-trade-activation_1642adb5.jpg",
     alt: "Dispositif d’activation terrain Djezzy, archive LinkedIn Iris Studio fournie.",
     source: "Djezzy · archive LinkedIn Iris Studio fournie",
     layout: "activation",
@@ -107,15 +108,15 @@ export const backstageGallery = [
 ] as const;
 
 export const brandPartners = [
-  { name: "Coca-Cola", logo: "assets/coca-cola-logo_5889a27b.png" },
-  { name: "Henkel", logo: "assets/henkel-logo-transparent-provided_47000655.png" },
-  { name: "Ooredoo", logo: "assets/ooredoo-logo-provided_5e9d03a0.png" },
-  { name: "Philip Morris International", logo: "assets/philip-morris-logo_9da5a02d.png" },
-  { name: "Bel", logo: "assets/bel-logo_b884da95.jpg" },
-  { name: "Danone", logo: "assets/danone-logo_ad3b4003.png" },
-  { name: "Algérie Télécom", logo: "assets/algerie-telecom-logo_58b44931.png" },
-  { name: "Djezzy", logo: "assets/djezzy-logo_827e6b0c.svg" },
-  { name: "Lafarge", logo: "assets/lafarge-logo_cd94104e.png" },
+  { name: "Coca-Cola", logo: "/assets/coca-cola-logo_5889a27b.png" },
+  { name: "Henkel", logo: "/assets/henkel-logo-transparent-provided_47000655.png" },
+  { name: "Ooredoo", logo: "/assets/ooredoo-logo-provided_5e9d03a0.png" },
+  { name: "Philip Morris International", logo: "/assets/philip-morris-logo_9da5a02d.png" },
+  { name: "Bel", logo: "/assets/bel-logo_b884da95.jpg" },
+  { name: "Danone", logo: "/assets/danone-logo_ad3b4003.png" },
+  { name: "Algérie Télécom", logo: "/assets/algerie-telecom-logo_58b44931.png" },
+  { name: "Djezzy", logo: "/assets/djezzy-logo_827e6b0c.svg" },
+  { name: "Lafarge", logo: "/assets/lafarge-logo_cd94104e.png" },
 ] as const;
 
 export const leadership = [
@@ -123,7 +124,7 @@ export const leadership = [
     name: "Rebai Chentli",
     role: "Directeur général",
     text: "Fonction associée publiquement à la direction générale d’Iris Studio.",
-    portrait: "assets/rebai-chentli_80c004cc.jpg",
+    portrait: "/assets/rebai-chentli_80c004cc.jpg",
     profile: "https://dz.linkedin.com/in/rebai-chentli-160a5332",
     alt: "Portrait public de Rebai Chentli",
     roleIcon: "direction" as const,
@@ -132,7 +133,7 @@ export const leadership = [
     name: "Abdelhak Bestandji",
     role: "Directeur associé",
     text: "Fonction associée publiquement à la direction de la SARL Iris Studio.",
-    portrait: "assets/abdelhak-bestandji-provided_76fb39f0.jpg",
+    portrait: "/assets/abdelhak-bestandji-provided_76fb39f0.jpg",
     profile: "https://dz.linkedin.com/in/abdelhak-bestandji-9b65918a",
     alt: "Portrait public d’Abdelhak Bestandji",
     roleIcon: "direction" as const,
@@ -141,7 +142,7 @@ export const leadership = [
     name: "Hadjer Mezhoud",
     role: "Responsable administratif et financier",
     text: "Responsable administratif et financier d’Iris Studio, selon l’intitulé professionnel communiqué pour cette fiche.",
-    portrait: "assets/hadjer-mezhoud.jpg",
+    portrait: "/assets/hadjer-mezhoud.jpg",
     alt: "Portrait public de Hadjer Mezhoud",
     profile: "https://www.linkedin.com/in/hadjer-mezhoud-a95b9969",
     roleIcon: "direction" as const,
@@ -155,7 +156,7 @@ export const letsPlayTeam = [
     text: "Éditeur en chef Gaming, Cinéma et Tech chez Iris Studio, Chafai Benamara est aussi identifié publiquement comme Editor in Chief & Host. À travers Let’s Play, il porte la conversation éditoriale entre jeu vidéo, culture, technologies et communauté.",
     marker: "ÉDITO",
     roleIcon: "editorial" as const,
-    portrait: "assets/chafai-benamara-provided_1faa62af.jpg",
+    portrait: "/assets/chafai-benamara-provided_1faa62af.jpg",
     portraitAlt: "Portrait fourni de Chafai Benamara",
     portraitCaption: "Portrait fourni / Chafai Benamara",
     source: "https://dz.linkedin.com/in/chafai-benamara-b7b87316",
@@ -173,7 +174,7 @@ export const letsPlayTeam = [
     },
     marker: "CINÉMA",
     roleIcon: "presentation" as const,
-    portrait: "assets/rebai-chentli_80c004cc.jpg",
+    portrait: "/assets/rebai-chentli_80c004cc.jpg",
     portraitAlt: "Portrait public de Rebai Chentli",
     portraitCaption: "Portrait / direction Iris Studio",
     source: "https://dz.linkedin.com/in/rebai-chentli-160a5332",
@@ -186,7 +187,7 @@ export const letsPlayTeam = [
     text: "Senior Community Manager de l’équipe Let’s Play, fonction communiquée par Iris Studio. Sa carte reste volontairement sans lien professionnel afin d’éviter toute association à un homonyme non vérifié.",
     marker: "COMMUNAUTÉ",
     roleIcon: "community" as const,
-    portrait: "assets/naoufel-amokrane-provided_d90f66ed.jpg",
+    portrait: "/assets/naoufel-amokrane-provided_d90f66ed.jpg",
     portraitAlt: "Portrait fourni de Naoufel Amokrane",
     portraitCaption: "Portrait fourni / Naoufel Amokrane",
   },
@@ -196,7 +197,7 @@ export const letsPlayTeam = [
     text: "Son profil professionnel public le présente comme Graphic Designer Senior chez Iris Studio.",
     marker: "IMAGE",
     roleIcon: "graphicDesign" as const,
-    portrait: "assets/salim-benmokhtar-provided_8a0bc794.png",
+    portrait: "/assets/salim-benmokhtar-provided_8a0bc794.png",
     portraitAlt: "Portrait fourni de Salim Benmokhtar",
     source: "https://dz.linkedin.com/in/salim-benmokhtar-526408365",
     sourceLabel: "Voir le profil LinkedIn",
@@ -223,7 +224,7 @@ export const letsPlayTeam = [
     },
     marker: "EASY TECH",
     roleIcon: "presentation" as const,
-    portrait: "assets/ramy-baghli-provided_9b78f5fa.jpg",
+    portrait: "/assets/ramy-baghli-provided_9b78f5fa.jpg",
     portraitAlt: "Portrait fourni de Ramy Baghli",
     portraitCaption: "Portrait fourni / Ramy Baghli",
   },
@@ -352,7 +353,7 @@ export default function About() {
           <div className="about-proof-route" aria-hidden="true"><span>02</span><i /><b>PREUVE TERRAIN</b></div>
           <figure className="about-proof-media">
             <span className="about-proof-index">ARCHIVE / 01</span>
-            <img src="assets/letsplay-comiccon_56bebf05.jpg" alt="Games and Comic Con Dzair, publication officielle de Let’s Play" />
+            <img src="/assets/letsplay-comiccon_56bebf05.jpg" alt="Games and Comic Con Dzair, publication officielle de Let’s Play" />
             <figcaption><span>Territoire culture & communauté</span><strong>Let’s Play × Algérie Télécom — Games & Comic Con Dzair</strong></figcaption>
           </figure>
           <div className="about-proof-copy">

@@ -1,3 +1,4 @@
+/* Import fidèle IRIS Studio : cette feuille ou ce composant conserve le langage éditorial et immersif du dépôt source. */
 /** Version vitrine : les prises de contact passent par les réseaux officiels, sans serveur ni collecte locale. */
 import { ArrowUpRight, Instagram, Linkedin, Mail, Youtube } from "lucide-react";
 import { Link } from "wouter";

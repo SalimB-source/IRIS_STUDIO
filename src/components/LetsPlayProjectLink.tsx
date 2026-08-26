@@ -1,3 +1,4 @@
+/* Import fidèle IRIS Studio : cette feuille ou ce composant conserve le langage éditorial et immersif du dépôt source. */
 import { type MouseEvent, type ReactNode, useState } from "react";
 import { Link, useLocation } from "wouter";
 import LetsPlayLoadingScreen from "./LetsPlayLoadingScreen";

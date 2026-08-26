@@ -1,3 +1,4 @@
+/* Import fidèle IRIS Studio : cette feuille ou ce composant conserve le langage éditorial et immersif du dépôt source. */
 import type { OperationalProject } from "./operationalProjectsContent";
 
 type ProjectId = OperationalProject["id"];

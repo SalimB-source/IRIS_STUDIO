@@ -1,3 +1,4 @@
+/* Import fidèle IRIS Studio : cette feuille ou ce composant conserve le langage éditorial et immersif du dépôt source. */
 import { ArrowLeft, ArrowUpRight, MoveRight } from "lucide-react";
 import { Link, useRoute } from "wouter";
 import { SiteFooter, SiteHeader } from "@/components/SiteChrome";

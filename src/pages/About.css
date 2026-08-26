@@ -1,3 +1,4 @@
+/* Import fidèle IRIS Studio : cette feuille ou ce composant conserve le langage éditorial et immersif du dépôt source. */
 /* Direction « Portfolio Iris » : grands blancs, rouge Iris décisionnel, œil géométrique et narration de marque vérifiable pour la direction, Let’s Play et le collectif Iris. */
 .about-page { background: #fff; color: #202020; }
 .about-page .site-header:not(.is-scrolled) { color: #202020; }.about-page .site-header:not(.is-scrolled) .brand-coordinate { border-color: rgba(32,32,32,.22); color: #747474; }.about-page .site-header:not(.is-scrolled) .header-cta { border-color: rgba(32,32,32,.22); }.about-page .site-header::after { background: linear-gradient(90deg, #e7433a 0 56%, transparent 56%); }

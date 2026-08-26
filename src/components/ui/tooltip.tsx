@@ -1,3 +1,4 @@
+/* Import fidèle IRIS Studio : cette feuille ou ce composant conserve le langage éditorial et immersif du dépôt source. */
 import * as React from "react";
 import * as TooltipPrimitive from "@radix-ui/react-tooltip";
 
