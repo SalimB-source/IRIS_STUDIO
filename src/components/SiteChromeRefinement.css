@@ -10,9 +10,3 @@
     padding-inline: .08rem;
   }
 }
-
-
-/* Symbole d’import : l’iris abstrait reste secondaire au logotype de référence. */
-.brand-logo-wrap { display: inline-flex; align-items: center; gap: 0.55rem; }
-.brand-symbol { width: 30px; height: 30px; flex: 0 0 auto; object-fit: contain; filter: drop-shadow(0 0 14px rgba(255,255,255,.16)); }
-@media (max-width: 680px) { .brand-symbol { width: 24px; height: 24px; } }

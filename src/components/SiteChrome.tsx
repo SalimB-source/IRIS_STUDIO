@@ -22,7 +22,6 @@ const navigation = [
 const IRIS_NAV_LOGO = "assets/iris-nav-logo-light-static-provided.png";
 const IRIS_NAV_LOGO_WHITE = "assets/iris-nav-logo-white_70ab914f.svg";
 const IRIS_LOGO_WHITE = "assets/IRISSTUDIOnewwhite_02120a7f.svg";
-const IRIS_IMPORTED_SYMBOL = "assets/iris-studio-symbol.webp";
 
 export function SiteHeader() {
   const [open, setOpen] = useState(false);
@@ -52,7 +51,7 @@ export function SiteHeader() {
     <>
       <header className={`site-header page-site-header ${scrolled ? "is-scrolled" : ""}`}>
         <Link className="brand-lockup" href="/" aria-label="Iris Studio — accueil" onClick={close}>
-          <span className="brand-logo-wrap"><img className="brand-symbol" src={IRIS_IMPORTED_SYMBOL} alt="" aria-hidden="true" /><img className={logoClassName} src={logo} alt="Iris Studio" /></span>
+          <span className="brand-logo-wrap"><img className={logoClassName} src={logo} alt="Iris Studio" /></span>
           <span className="brand-coordinate" aria-hidden="true">ALGER / 36.75°</span>
         </Link>
         <nav className="desktop-nav" aria-label="Navigation principale">
