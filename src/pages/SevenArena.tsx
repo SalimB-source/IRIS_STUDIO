@@ -159,7 +159,6 @@ export default function SevenArena() {
             <span>E-SPORT · MOBILE GAMING · COMPÉTITION · COMMUNAUTÉ</span>
           </div>
           <div className="detail-project-brand detail-project-brand--arena">
-            <span>Identité du projet</span>
             <img src={brand.logo} alt={brand.alt} />
           </div>
         </section>
