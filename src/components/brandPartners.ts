@@ -8,5 +8,6 @@ export const brandPartners = [
   { name: "Danone", logo: "assets/danone-logo-fourni.png" },
   { name: "Algérie Télécom", logo: "assets/algerie-telecom-logo_58b44931.png" },
   { name: "Djezzy", logo: "assets/djezzy-logo_827e6b0c.svg" },
+  { name: "EGOR", logo: "assets/egor-logo-fourni.webp" },
   { name: "Lafarge", logo: "assets/lafarge-logo_cd94104e.png" },
 ] as const;
