@@ -15,13 +15,13 @@ import "./HomeArtistic.css";
 import "./HomeArtisticResponsive.css";
 
 const heroVisual = {
-  src: "/assets/iris-trajectory-hero-reference_8b88546d.jpg",
+  src: "assets/iris-trajectory-hero-reference_8b88546d.jpg",
   alt: "Une équipe prépare une stratégie de marque autour d’une table de travail",
 };
 
 const trajectoryImages = {
-  atelier: "/assets/iris-team-documentary_eceff224.jpg",
-  field: "/assets/iris-hero-retail-campaign_47119dc3.jpg",
+  atelier: "assets/iris-team-documentary_eceff224.jpg",
+  field: "assets/iris-hero-retail-campaign_47119dc3.jpg",
 };
 
 function useParallaxTrajectory() {
@@ -213,7 +213,7 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="art-contact" aria-labelledby="home-cta-title"><div className="iris-import-atmosphere" aria-hidden="true"><img className="iris-import-architecture" src="/assets/iris-studio-abstract-light-architecture.webp" alt="" /><img className="iris-import-motion" src="/assets/iris-studio-editorial-motion.webp" alt="" /><img className="iris-import-lens" src="/assets/iris-studio-blue-lens.webp" alt="" /></div><div className="art-contact-orbit art-parallax-layer" data-iris-parallax="-16" aria-hidden="true"><i /><i /><b /></div><p className="art-kicker"><span>07</span> PROCHAIN MOUVEMENT</p><h2 id="home-cta-title" className="impact-reveal" data-impact-reveal data-impact-stage="1">Une intention mérite<br />d’aller <em>plus loin.</em></h2><Link className="art-button art-button-light" href="/contact">Construire la suite <ArrowUpRight size={18} /></Link></section>
+        <section className="art-contact" aria-labelledby="home-cta-title"><div className="iris-import-atmosphere" aria-hidden="true"><img className="iris-import-architecture" src="assets/iris-studio-abstract-light-architecture.webp" alt="" /><img className="iris-import-motion" src="assets/iris-studio-editorial-motion.webp" alt="" /><img className="iris-import-lens" src="assets/iris-studio-blue-lens.webp" alt="" /></div><div className="art-contact-orbit art-parallax-layer" data-iris-parallax="-16" aria-hidden="true"><i /><i /><b /></div><p className="art-kicker"><span>07</span> PROCHAIN MOUVEMENT</p><h2 id="home-cta-title" className="impact-reveal" data-impact-reveal data-impact-stage="1">Une intention mérite<br />d’aller <em>plus loin.</em></h2><Link className="art-button art-button-light" href="/contact">Construire la suite <ArrowUpRight size={18} /></Link></section>
       </main>
       <SiteFooter />
     </div>

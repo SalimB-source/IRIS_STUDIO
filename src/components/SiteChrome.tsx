@@ -19,10 +19,10 @@ const navigation = [
   { href: "/contact", label: "Contact" },
 ];
 
-const IRIS_NAV_LOGO = "/assets/iris-nav-logo-light-static-provided.png";
-const IRIS_NAV_LOGO_WHITE = "/assets/iris-nav-logo-white_70ab914f.svg";
-const IRIS_LOGO_WHITE = "/assets/IRISSTUDIOnewwhite_02120a7f.svg";
-const IRIS_IMPORTED_SYMBOL = "/assets/iris-studio-symbol.webp";
+const IRIS_NAV_LOGO = "assets/iris-nav-logo-light-static-provided.png";
+const IRIS_NAV_LOGO_WHITE = "assets/iris-nav-logo-white_70ab914f.svg";
+const IRIS_LOGO_WHITE = "assets/IRISSTUDIOnewwhite_02120a7f.svg";
+const IRIS_IMPORTED_SYMBOL = "assets/iris-studio-symbol.webp";
 
 export function SiteHeader() {
   const [open, setOpen] = useState(false);
