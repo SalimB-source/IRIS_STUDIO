@@ -8,6 +8,7 @@ import { useEffect, useState } from "react";
 import { ArrowLeft, ArrowUpRight, Instagram, Play, Youtube } from "lucide-react";
 import { Link } from "wouter";
 import { ProjectProgressRail } from "@/components/ProjectProgressRail";
+import { partnerProjectBranding } from "@/components/partnerProjectBranding";
 import { SiteFooter, SiteHeader } from "@/components/SiteChrome";
 import {
   Carousel,
@@ -138,6 +139,8 @@ function ArenaVisualCarousel() {
 }
 
 export default function SevenArena() {
+  const brand = partnerProjectBranding.sevenArena;
+
   return (
     <div className="page-shell project-detail arena-detail">
       <SiteHeader />
@@ -154,6 +157,10 @@ export default function SevenArena() {
               L’arène est<br />dans <em>la 7ouma.</em>
             </h1>
             <span>E-SPORT · MOBILE GAMING · COMPÉTITION · COMMUNAUTÉ</span>
+          </div>
+          <div className="detail-project-brand detail-project-brand--arena">
+            <span>Identité du projet</span>
+            <img src={brand.logo} alt={brand.alt} />
           </div>
         </section>
 
