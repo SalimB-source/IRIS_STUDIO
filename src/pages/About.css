@@ -48,3 +48,11 @@
 .dark .about-client-marquee { border-color: rgba(247,242,236,.25); }.dark .about-client-marquee-set img { filter: grayscale(1) contrast(1.2) brightness(1.8) invert(1); opacity: .82; }.dark .about-client-marquee:hover img { filter: grayscale(1) contrast(1.15) brightness(2) invert(1); opacity: 1; }
 @media (max-width: 640px) { .about-client-marquee-set { gap: 1.65rem; padding-block: .9rem; }.about-client-marquee-set span { width: 6.5rem; height: 3.4rem; }.about-client-marquee-set img { max-width: 6rem; height: 2.35rem; }.about-client-marquee-track { animation-duration: 26s; } }
 @media (prefers-reduced-motion: reduce) { .about-client-marquee { overflow-x: auto; -webkit-mask-image: none; mask-image: none; }.about-client-marquee-track { width: max-content; animation: none; }.about-client-marquee-set[aria-hidden="true"] { display: none; } }
+
+/* Bandeau plein large : les partenaires occupent l’écran comme une frise de marque. */
+.about-client-dossier { grid-column: 1 / -1; width: 100vw; margin-top: clamp(.8rem,3vw,2.6rem); margin-left: calc(50% - 50vw); }
+.about-client-source { margin-right: max(1.3rem,9vw); margin-left: max(1.3rem,9vw); }
+.about-client-marquee-set { gap: clamp(2.4rem,5vw,5.5rem); padding: clamp(1.3rem,2.4vw,2.1rem) max(1.3rem,4vw,4.5rem); }
+.about-client-marquee-set span { width: clamp(12rem,17vw,18rem); height: clamp(6.4rem,9vw,8.6rem); }
+.about-client-marquee-set img { max-width: min(100%,14.5rem); height: clamp(4rem,5.6vw,5.6rem); }
+@media (max-width: 640px) { .about-client-dossier { margin-top: 1.4rem; }.about-client-source { margin-right: 1.3rem; margin-left: 1.3rem; }.about-client-marquee-set { gap: 2.2rem; padding: 1.15rem 1.3rem; }.about-client-marquee-set span { width: 10.4rem; height: 5.8rem; }.about-client-marquee-set img { max-width: 9rem; height: 4rem; }.about-client-marquee-track { animation-duration: 30s; } }
