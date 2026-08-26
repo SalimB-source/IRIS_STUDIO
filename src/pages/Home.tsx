@@ -9,10 +9,12 @@ import { Link } from "wouter";
 import { SiteFooter, SiteHeader } from "@/components/SiteChrome";
 import LetsPlayProjectLink from "@/components/LetsPlayProjectLink";
 import SevenArenaProjectLink from "@/components/SevenArenaProjectLink";
+import { brandPartners } from "@/components/brandPartners";
 import { partnerProjectBranding } from "@/components/partnerProjectBranding";
 import { featuredEpisodes } from "./homeContent";
 import "./HomeArtistic.css";
 import "./HomeArtisticResponsive.css";
+import "./HomeBrandMarquee.css";
 
 const heroVisual = {
   src: "assets/iris-trajectory-hero-reference_8b88546d.jpg",
@@ -132,6 +134,24 @@ export default function Home() {
             <i className="art-hero-index" aria-hidden="true">01</i>
           </figure>
           <a className="art-scroll-cue" href="#trajectory" aria-label="Découvrir la trajectoire Iris"><span>Défiler</span><ArrowDown size={18} /></a>
+        </section>
+
+        <section className="art-brand-marquee" aria-labelledby="home-brands-title">
+          <div className="art-brand-marquee-intro">
+            <p id="home-brands-title">Marques partenaires</p>
+            <span>Un écosystème qui prend le terrain</span>
+          </div>
+          <div className="art-brand-marquee-window">
+            <div className="art-brand-marquee-track">
+              {[0, 1].map((setIndex) => (
+                <div className="art-brand-marquee-set" aria-hidden={setIndex === 1} key={setIndex}>
+                  {brandPartners.map((client) => (
+                    <span key={`${client.name}-${setIndex}`}><img src={client.logo} alt={setIndex === 0 ? `Logo ${client.name}` : ""} loading="lazy" decoding="async" /></span>
+                  ))}
+                </div>
+              ))}
+            </div>
+          </div>
         </section>
 
         <section id="trajectory" className="art-manifesto" aria-labelledby="intro-title">

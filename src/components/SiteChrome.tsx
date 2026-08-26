@@ -11,6 +11,7 @@ import LetsPlayProjectLink from "@/components/LetsPlayProjectLink";
 import "./SiteChromeRefinement.css";
 
 const navigation = [
+  { href: "/", label: "Accueil" },
   { href: "/a-propos", label: "À propos" },
   { href: "/agence", label: "L’agence" },
   { href: "/expertises", label: "Expertises" },
@@ -64,7 +65,6 @@ export function SiteHeader() {
       </header>
       <div className={`mobile-menu ${open ? "is-open" : ""}`} aria-hidden={!open}>
         <p className="menu-kicker">Trajectoire Iris</p>
-        <Link href="/" onClick={close}><span>Accueil</span><ArrowUpRight size={22} /></Link>
         {navigation.map((item) => item.href === "/projets/lets-play" ? <LetsPlayProjectLink key={item.href} className={item.className} onNavigate={close}><span>{item.label}</span><ArrowUpRight size={22} /></LetsPlayProjectLink> : <Link key={item.href} className={item.className} href={item.href} onClick={close}><span>{item.label}</span><ArrowUpRight size={22} /></Link>)}
       </div>
     </>
