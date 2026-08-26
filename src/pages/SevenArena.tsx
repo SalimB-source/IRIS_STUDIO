@@ -7,7 +7,6 @@
 import { useEffect, useState } from "react";
 import { ArrowLeft, ArrowUpRight, Instagram, Play, Youtube } from "lucide-react";
 import { Link } from "wouter";
-import { ProjectProgressRail } from "@/components/ProjectProgressRail";
 import { partnerProjectBranding } from "@/components/partnerProjectBranding";
 import { SiteFooter, SiteHeader } from "@/components/SiteChrome";
 import {
@@ -28,7 +27,6 @@ import {
   sevenArenaVisuals,
   sevenArenaVoices,
 } from "./sevenArenaContent";
-import { sevenArenaProgressChapters } from "./projectProgressChapters";
 
 function ArenaVisualCarousel() {
   const [api, setApi] = useState<CarouselApi>();
@@ -162,8 +160,6 @@ export default function SevenArena() {
             <img src={brand.logo} alt={brand.alt} />
           </div>
         </section>
-
-        <ProjectProgressRail ariaLabel="Parcours de la fiche 7ouma Arena" chapters={sevenArenaProgressChapters} />
 
         <section id="arena-overview" className="detail-overview section-pad project-progress-target">
           <div>
