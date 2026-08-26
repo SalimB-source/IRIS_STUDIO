@@ -21,15 +21,14 @@ const navigation = [
 ];
 
 const IRIS_NAV_LOGO = "assets/iris-nav-logo-light-static-provided.png";
-const IRIS_NAV_LOGO_WHITE = "assets/iris-nav-logo-white_70ab914f.svg";
-const IRIS_LOGO_WHITE = "assets/IRISSTUDIOnewwhite_02120a7f.svg";
+const IRIS_LOGO_PROVIDED = "assets/iris-studio-logo-provided.png";
 
 export function SiteHeader() {
   const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const [location] = useLocation();
   const { theme, toggleTheme } = useTheme();
-  const logo = theme === "dark" ? IRIS_NAV_LOGO_WHITE : IRIS_NAV_LOGO;
+  const logo = theme === "dark" ? IRIS_LOGO_PROVIDED : IRIS_NAV_LOGO;
   const logoClassName = `brand-logo${theme === "dark" ? " brand-logo--white" : ""}`;
 
   useEffect(() => {
@@ -72,7 +71,7 @@ export function SiteHeader() {
 }
 
 export function SiteFooter() {
-  const logo = IRIS_LOGO_WHITE;
+  const logo = IRIS_LOGO_PROVIDED;
   return (
     <footer className="site-footer page-footer">
       <div className="footer-top">
