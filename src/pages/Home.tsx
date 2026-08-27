@@ -220,7 +220,7 @@ export default function Home() {
             <p className="art-kicker"><span>04</span> DE LA VISION À L’EXPÉRIENCE</p>
             <h2 id="field-title" className="impact-reveal" data-impact-reveal data-impact-stage="1">Ce qui compte ne reste jamais <em>sur la table.</em></h2>
             <p>Une réponse créative devient utile lorsqu’elle circule, active un lieu, une équipe ou une conversation. C’est là que le studio mesure la justesse d’un dispositif.</p>
-            <Link className="art-text-link" href="/expertises">Explorer nos expertises <MoveRight size={18} /></Link>
+            <Link className="art-text-link" href="/agence#agency-expertises">Explorer nos expertises <MoveRight size={18} /></Link>
           </div>
         </section>
 

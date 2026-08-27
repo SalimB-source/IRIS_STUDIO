@@ -14,7 +14,6 @@ const navigation = [
   { href: "/", label: "Accueil" },
   { href: "/a-propos", label: "À propos" },
   { href: "/agence", label: "L’agence" },
-  { href: "/expertises", label: "Expertises" },
   { href: "/projets/lets-play", label: "Let’s Play", className: "is-letsplay-link" },
   { href: "/projets", label: "Projets" },
   { href: "/contact", label: "Contact" },

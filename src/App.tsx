@@ -3,7 +3,7 @@ import { Toaster } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import NotFound from "@/pages/NotFound";
 import Home from "@/pages/Home";
-import { Route, Router as WouterRouter, Switch, useLocation } from "wouter";
+import { Redirect, Route, Router as WouterRouter, Switch, useLocation } from "wouter";
 import ErrorBoundary from "./components/ErrorBoundary";
 import LaunchScreen from "./components/LaunchScreen";
 import PageNavigationTransition from "./components/PageNavigationTransition";
@@ -14,7 +14,6 @@ import { isPartnerProjectPath, partnerProjectScrollSettleDelay, scrollPartnerPro
 const About = lazy(() => import("@/pages/About"));
 const Agency = lazy(() => import("@/pages/Agency"));
 const Contact = lazy(() => import("@/pages/Contact"));
-const Expertises = lazy(() => import("@/pages/Expertises"));
 const LetsPlay = lazy(() => import("@/pages/LetsPlay"));
 const OperationalProjectDetail = lazy(() => import("@/pages/OperationalProjectDetail"));
 const Projects = lazy(() => import("@/pages/Projects"));
@@ -49,7 +48,7 @@ function RouteTree() {
     <Route path="/" component={Home} />
     <Route path="/a-propos" component={About} />
     <Route path="/agence" component={Agency} />
-    <Route path="/expertises" component={Expertises} />
+    <Route path="/expertises"><Redirect to="/agence#agency-expertises" /></Route>
     <Route path="/projets/lets-play" component={LetsPlay} />
     <Route path="/projets/7ouma-arena" component={SevenArena} />
     <Route path="/projets/:projectId" component={OperationalProjectDetail} />
