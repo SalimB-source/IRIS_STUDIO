@@ -18,9 +18,10 @@ import "./HomeBrandMarquee.css";
 import "./HomeHeroCinematic.css";
 import "./HomeProofFigures.css";
 
-const heroVisual = {
-  src: "assets/iris-rebai-chentli-cinematic-hero.png",
-  alt: "Portrait cinématographique de Rebai Chentli dans un studio sombre",
+const heroVisuals = {
+  day: "assets/iris-hero-director-day.webp",
+  night: "assets/iris-hero-director-night.webp",
+  alt: "Portrait de Rebai Chentli face à Alger, depuis un bureau panoramique",
 };
 
 const trajectoryImages = {
@@ -141,7 +142,8 @@ export default function Home() {
             <nav className="art-hero-socials" aria-label="Réseaux sociaux Iris Studio"><span>IRIS / EN LIGNE</span><a href="https://www.instagram.com/iris_studio_marketing/" target="_blank" rel="noreferrer" aria-label="Suivre Iris Studio sur Instagram"><Instagram size={15} aria-hidden="true" /></a><a href="https://www.linkedin.com/company/iris-studio-alger/" target="_blank" rel="noreferrer" aria-label="Suivre Iris Studio sur LinkedIn"><Linkedin size={15} aria-hidden="true" /></a></nav>
           </div>
           <figure className="art-hero-visual art-parallax-layer" data-iris-parallax="-10">
-            <img src={heroVisual.src} alt={heroVisual.alt} />
+            <img className="art-hero-image art-hero-image--day" src={heroVisuals.day} alt={heroVisuals.alt} />
+            <img className="art-hero-image art-hero-image--night" src={heroVisuals.night} alt="" aria-hidden="true" />
             <figcaption><span>SCÈNE / 01</span><b>De l’intuition à l’action.</b></figcaption>
           </figure>
           <div className="art-hero-orbit art-parallax-layer" data-iris-parallax="22" aria-hidden="true"><i /><i /><i /><b /></div>
