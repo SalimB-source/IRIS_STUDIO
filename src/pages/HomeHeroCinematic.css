@@ -1,0 +1,40 @@
+/* Direction IRIS : ouverture cinématographique sombre, typographie éditoriale et repères de terrain ; le visuel reste une scène, jamais une imitation de la référence. */
+.art-home:has(.art-hero--cinematic) { background:#070707; }
+.art-home:has(.art-hero--cinematic) .site-header.is-cinematic-hero { border-bottom-color:rgba(255,255,255,.18); background:linear-gradient(180deg,rgba(0,0,0,.66),rgba(0,0,0,0)); box-shadow:none; color:#fff; backdrop-filter:none; }
+.art-home:has(.art-hero--cinematic) .site-header.is-cinematic-hero :is(.desktop-nav a,.brand-coordinate,.theme-toggle,.mobile-toggle) { color:#fff !important; }
+.art-home:has(.art-hero--cinematic) .site-header.is-cinematic-hero .brand-coordinate { border-left-color:rgba(255,255,255,.4); }
+.art-home:has(.art-hero--cinematic) .site-header.is-cinematic-hero .theme-toggle { border-color:rgba(255,255,255,.5); }
+.art-home:has(.art-hero--cinematic) .site-header.is-cinematic-hero .desktop-nav a:not(.is-active):hover { color:#f28a43 !important; }
+.art-home:has(.art-hero--cinematic) .site-header.is-cinematic-hero .desktop-nav a.is-active { border-color:#e7433a; color:#fff !important; }
+.art-home .art-hero--cinematic { position:relative; display:grid; min-height:max(46rem,100svh); grid-template-columns:minmax(0,1fr); align-items:center; overflow:hidden; padding:clamp(8.8rem,13vw,11rem) max(1.5rem,7vw) clamp(5.4rem,9vw,8rem); background:#070707; color:#fff; isolation:isolate; }
+.art-home .art-hero--cinematic::after { position:absolute; z-index:-1; inset:0; border:0; border-radius:0; background:linear-gradient(90deg,rgba(0,0,0,.91) 0%,rgba(0,0,0,.7) 39%,rgba(0,0,0,.15) 75%,rgba(0,0,0,.62) 100%),linear-gradient(0deg,rgba(0,0,0,.92) 0%,transparent 34%); content:""; transform:none; }
+.art-home .art-hero--cinematic .art-hero-visual { position:absolute; z-index:-2; inset:0; width:100%; height:100%; margin:0; padding:0; background:#070707; box-shadow:none; }
+.art-home .art-hero--cinematic .art-hero-visual::before { top:auto; right:clamp(1.5rem,4vw,4.5rem); bottom:clamp(2rem,4vw,4.5rem); left:auto; width:clamp(4rem,7vw,7rem); height:clamp(4rem,7vw,7rem); border-color:rgba(255,255,255,.35); }
+.art-home .art-hero--cinematic .art-hero-visual img { width:100%; height:100%; aspect-ratio:auto; object-fit:cover; object-position:69% center; filter:grayscale(1) contrast(1.14) brightness(.88); }
+.art-home .art-hero--cinematic .art-hero-visual figcaption { right:clamp(1.5rem,7vw,7rem); bottom:clamp(2rem,4.5vw,4.5rem); left:auto; width:min(17rem,24vw); padding:.7rem 0 0; border-top:1px solid rgba(255,255,255,.45); background:transparent; color:#fff; }
+.art-home .art-hero--cinematic .art-hero-visual figcaption span { color:#f28a43; }
+.art-home .art-hero--cinematic .art-hero-visual figcaption b { max-width:11rem; font-size:clamp(1.1rem,1.45vw,1.45rem); line-height:.92; text-align:right; }
+.art-home .art-hero--cinematic .art-hero-copy { z-index:2; max-width:min(48rem,64vw); margin:clamp(1rem,5vw,5rem) 0 0 clamp(0rem,7vw,8rem); color:#fff; }
+.art-home .art-hero--cinematic .art-hero-kicker { color:#fff; }
+.art-home .art-hero--cinematic .art-hero-kicker span { border-color:#e7433a; color:#fff; }
+.art-home .art-hero--cinematic .art-hero-manifesto { margin:clamp(1.6rem,3vw,3.2rem) 0 1rem; color:rgba(255,255,255,.7); font-size:.56rem; font-weight:800; letter-spacing:.13em; text-transform:uppercase; }
+.art-home .art-hero--cinematic .art-hero-copy h1 { max-width:12ch; margin:0 0 1.5rem; color:#fff; font-family:"DM Serif Display",Georgia,serif; font-size:clamp(5rem,10vw,10.5rem); letter-spacing:-.09em; line-height:.76; text-wrap:balance; }
+.art-home .art-hero--cinematic .art-hero-copy h1 em { color:#e7433a; }
+.art-home .art-hero--cinematic .art-hero-intro { max-width:27rem; color:rgba(255,255,255,.76); font-size:clamp(.86rem,1.12vw,1rem); line-height:1.65; }
+.art-home .art-hero--cinematic .art-hero-actions { gap:1rem; margin-top:2rem; }
+.art-home .art-hero--cinematic .art-button-main { background:#e7433a; }
+.art-home .art-hero--cinematic .art-button-main:hover { background:#f28a43; color:#202020; }
+.art-home .art-hero--cinematic .art-text-link { color:#fff; }
+.art-home .art-hero--cinematic .art-text-link:hover { color:#f28a43; }
+.art-home .art-hero--cinematic .art-hero-coordinate { z-index:3; top:clamp(7rem,10vw,9rem); left:max(1.5rem,4vw); color:rgba(255,255,255,.7); }
+.art-home .art-hero--cinematic .art-hero-orbit { z-index:1; right:clamp(8rem,20vw,23rem); bottom:clamp(6rem,14vh,11rem); width:clamp(13rem,22vw,24rem); height:clamp(7rem,12vw,13rem); border-color:rgba(242,138,67,.55); opacity:.85; }
+.art-home .art-hero--cinematic .art-hero-orbit i { border-color:rgba(255,255,255,.23); }
+.art-home .art-hero--cinematic .art-hero-orbit i:nth-child(3) { background:#e7433a; }
+.art-home .art-hero--cinematic .art-hero-protocol { position:absolute; z-index:3; right:max(1.5rem,4vw); bottom:clamp(1.45rem,2.6vw,2.5rem); display:flex; align-items:center; gap:.7rem; color:rgba(255,255,255,.68); font-size:.47rem; font-weight:800; letter-spacing:.13em; text-transform:uppercase; }
+.art-home .art-hero--cinematic .art-hero-protocol i { width:clamp(3rem,7vw,7rem); height:1px; background:#e7433a; }
+.art-home .art-hero--cinematic .art-hero-protocol b { margin-left:.8rem; color:#f28a43; font-style:normal; }
+.art-home .art-hero--cinematic .art-scroll-cue { z-index:3; bottom:clamp(1.45rem,2.6vw,2.5rem); left:max(1.5rem,4vw); color:#fff; }
+.art-home .art-hero--cinematic .art-scroll-cue svg { color:#f28a43; }
+@media (prefers-reduced-motion:no-preference) { .art-home .art-hero--cinematic .art-hero-visual img { animation:iris-cinematic-breathe 15s cubic-bezier(.45,0,.2,1) infinite alternate; } }
+@keyframes iris-cinematic-breathe { from { transform:scale(1); } to { transform:scale(1.035); } }
+@media (max-width:760px) { .art-home .art-hero--cinematic { min-height:46rem; align-items:end; padding:8rem 1.3rem 5.8rem; }.art-home .art-hero--cinematic::after { background:linear-gradient(0deg,rgba(0,0,0,.97) 0%,rgba(0,0,0,.78) 48%,rgba(0,0,0,.16) 100%); }.art-home .art-hero--cinematic .art-hero-visual img { object-position:64% center; }.art-home .art-hero--cinematic .art-hero-copy { max-width:100%; margin:0; }.art-home .art-hero--cinematic .art-hero-copy h1 { max-width:9ch; font-size:clamp(4.55rem,20vw,6.1rem); }.art-home .art-hero--cinematic .art-hero-manifesto { margin:1.2rem 0 .75rem; }.art-home .art-hero--cinematic .art-hero-intro { max-width:21rem; font-size:.82rem; }.art-home .art-hero--cinematic .art-hero-actions { gap:.7rem; margin-top:1.5rem; }.art-home .art-hero--cinematic .art-hero-coordinate { top:6.2rem; left:1.3rem; font-size:.42rem; }.art-home .art-hero--cinematic .art-hero-orbit { right:-4rem; bottom:11rem; width:12rem; height:6rem; }.art-home .art-hero--cinematic .art-hero-visual figcaption { display:none; }.art-home .art-hero--cinematic .art-hero-protocol { right:1.3rem; bottom:1.55rem; }.art-home .art-hero--cinematic .art-hero-protocol span:first-child { display:none; }.art-home .art-hero--cinematic .art-scroll-cue { bottom:1.45rem; left:1.3rem; } }

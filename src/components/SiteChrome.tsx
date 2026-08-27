@@ -28,8 +28,10 @@ export function SiteHeader() {
   const [scrolled, setScrolled] = useState(false);
   const [location] = useLocation();
   const { theme, toggleTheme } = useTheme();
-  const logo = theme === "dark" ? IRIS_LOGO_PROVIDED : IRIS_NAV_LOGO;
-  const logoClassName = `brand-logo${theme === "dark" ? " brand-logo--white" : ""}`;
+  const hasCinematicHomeHero = location === "/" && !scrolled;
+  const usesWhiteLogo = theme === "dark" || hasCinematicHomeHero;
+  const logo = usesWhiteLogo ? IRIS_LOGO_PROVIDED : IRIS_NAV_LOGO;
+  const logoClassName = `brand-logo${usesWhiteLogo ? " brand-logo--white" : ""}`;
 
   useEffect(() => {
     const updateHeader = () => setScrolled(window.scrollY > 28);
@@ -49,7 +51,7 @@ export function SiteHeader() {
 
   return (
     <>
-      <header className={`site-header page-site-header ${scrolled ? "is-scrolled" : ""}`}>
+      <header className={`site-header page-site-header ${scrolled ? "is-scrolled" : ""} ${hasCinematicHomeHero ? "is-cinematic-hero" : ""}`}>
         <Link className="brand-lockup" href="/" aria-label="Iris Studio — accueil" onClick={close}>
           <span className="brand-logo-wrap"><img className={logoClassName} src={logo} alt="Iris Studio" /></span>
           <span className="brand-coordinate" aria-hidden="true">ALGER / 36.75°</span>

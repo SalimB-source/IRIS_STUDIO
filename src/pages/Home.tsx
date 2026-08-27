@@ -15,10 +15,11 @@ import { featuredEpisodes } from "./homeContent";
 import "./HomeArtistic.css";
 import "./HomeArtisticResponsive.css";
 import "./HomeBrandMarquee.css";
+import "./HomeHeroCinematic.css";
 
 const heroVisual = {
-  src: "assets/iris-trajectory-hero-reference_8b88546d.jpg",
-  alt: "Une équipe prépare une stratégie de marque autour d’une table de travail",
+  src: "assets/iris-cinematic-hero-campaign.png",
+  alt: "Portrait cinématographique d’une directrice de création dans un studio sombre",
 };
 
 const trajectoryImages = {
@@ -119,20 +120,21 @@ export default function Home() {
       <SiteHeader />
       <main className="art-main">
         <div className="art-trajectory-mark" aria-hidden="true"><i /><i /><i /><b>IRIS / EN MOUVEMENT</b></div>
-        <section className="art-hero" aria-labelledby="home-title">
-          <span className="art-hero-coordinate" data-iris-parallax="14">ALGER / 36.75° N — 03.05° E</span>
-          <div className="art-hero-orbit art-parallax-layer" data-iris-parallax="34" aria-hidden="true"><i /><i /><i /><b /></div>
+        <section className="art-hero art-hero--cinematic" aria-labelledby="home-title">
+          <span className="art-hero-coordinate" data-iris-parallax="14">IRIS STUDIO / ALGER — 36.75° N</span>
           <div className="art-hero-copy">
-            <p className="art-kicker"><span>01</span> IRIS STUDIO / COMMUNICATION AUTREMENT</p>
+            <p className="art-kicker art-hero-kicker"><span>01</span> COMMUNICATION AUTREMENT</p>
+            <p className="art-hero-manifesto">[ LE TERRAIN, SANS RACCOURCI ]</p>
             <h1 id="home-title" className="impact-title-lines" data-impact-reveal data-impact-stage="1"><span>Les idées</span><span>prennent <em>le terrain.</em></span></h1>
             <p className="art-hero-intro">Stratégies, campagnes et formats de marque conçus pour devenir des expériences vécues — dans les lieux, les usages et les communautés qui comptent.</p>
             <div className="art-hero-actions"><Link className="art-button art-button-main" href="/contact">Ouvrir un projet <ArrowUpRight size={17} /></Link><Link className="art-text-link" href="/agence">Entrer dans le studio <MoveRight size={18} /></Link></div>
           </div>
-          <figure className="art-hero-visual art-parallax-layer" data-iris-parallax="-18">
+          <figure className="art-hero-visual art-parallax-layer" data-iris-parallax="-10">
             <img src={heroVisual.src} alt={heroVisual.alt} />
             <figcaption><span>SCÈNE / 01</span><b>De l’intuition à l’action.</b></figcaption>
-            <i className="art-hero-index" aria-hidden="true">01</i>
           </figure>
+          <div className="art-hero-orbit art-parallax-layer" data-iris-parallax="22" aria-hidden="true"><i /><i /><i /><b /></div>
+          <div className="art-hero-protocol" aria-hidden="true"><span>CAPTER</span><i /><span>FAIRE VIVRE</span><b>01 / 06</b></div>
           <a className="art-scroll-cue" href="#trajectory" aria-label="Découvrir la trajectoire Iris"><span>Défiler</span><ArrowDown size={18} /></a>
         </section>
 
