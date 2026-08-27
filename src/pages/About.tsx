@@ -8,10 +8,13 @@ import { useState, type MouseEvent as ReactMouseEvent } from "react";
 import { ArrowUpRight, BarChart3, BriefcaseBusiness, Brush, Clapperboard, Linkedin, LoaderCircle, Mic2, MoveRight, PenLine, Play, UserRound, UsersRound } from "lucide-react";
 import { Link } from "wouter";
 import { SiteFooter, SiteHeader } from "@/components/SiteChrome";
+import { partnerProjectBranding } from "@/components/partnerProjectBranding";
 import "./About.css";
 import "./AboutRefinement.css";
 import "./AboutPortraitPlaceholders.css";
 import "./AboutLetsPlayLayout.css";
+import "./AboutTeamCardSystem.css";
+import "./AboutLetsPlayGaming.css";
 
 const roleIcons = {
   direction: BriefcaseBusiness,
@@ -400,6 +403,9 @@ export default function About() {
 
         <section className="about-letsplay-team section-pad" aria-labelledby="letsplay-team-title">
           <div className="about-letsplay-team-route" aria-hidden="true"><span>04</span><i /><b>CRÉDITS DE FABRICATION</b></div>
+          <div className="about-letsplay-brand-stamp">
+            <img src={partnerProjectBranding.letsPlay.logo} alt={partnerProjectBranding.letsPlay.alt} />
+          </div>
           <div className="about-letsplay-team-heading">
             <p className="eyebrow">Let’s Play × Algérie Télécom</p>
             <h2 id="letsplay-team-title" className="display-title">Une émission se construit<br />à plusieurs <em>regards.</em></h2>
