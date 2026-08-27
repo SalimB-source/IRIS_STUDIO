@@ -26,7 +26,21 @@ const heroVisuals = {
 
 const trajectoryImages = {
   atelier: "assets/iris-team-documentary_eceff224.jpg",
-  field: "assets/iris-hero-retail-campaign_47119dc3.jpg",
+  field: {
+    compact: "assets/iris-home-field-960.webp",
+    large: "assets/iris-home-field-1440.webp",
+  },
+};
+
+const homeProjectThumbnails = {
+  letsPlay: {
+    compact: "assets/iris-home-letsplay-thumbnail-960.webp",
+    large: "assets/iris-home-letsplay-thumbnail-1440.webp",
+  },
+  sevenArena: {
+    compact: "assets/iris-home-7ouma-thumbnail-960.webp",
+    large: "assets/iris-home-7ouma-thumbnail-1440.webp",
+  },
 };
 
 const irisPublishedFigures = [
@@ -142,8 +156,8 @@ export default function Home() {
             <nav className="art-hero-socials" aria-label="Réseaux sociaux Iris Studio"><span>IRIS / EN LIGNE</span><a href="https://www.instagram.com/iris_studio_marketing/" target="_blank" rel="noreferrer" aria-label="Suivre Iris Studio sur Instagram"><Instagram size={15} aria-hidden="true" /></a><a href="https://www.linkedin.com/company/iris-studio-alger/" target="_blank" rel="noreferrer" aria-label="Suivre Iris Studio sur LinkedIn"><Linkedin size={15} aria-hidden="true" /></a></nav>
           </div>
           <figure className="art-hero-visual art-parallax-layer" data-iris-parallax="-10">
-            <img className="art-hero-image art-hero-image--day" src={heroVisuals.day} alt={heroVisuals.alt} />
-            <img className="art-hero-image art-hero-image--night" src={heroVisuals.night} alt="" aria-hidden="true" />
+            <img className="art-hero-image art-hero-image--day" src={heroVisuals.day} alt={heroVisuals.alt} decoding="async" fetchPriority="high" />
+            <img className="art-hero-image art-hero-image--night" src={heroVisuals.night} alt="" aria-hidden="true" decoding="async" />
             <figcaption><span>SCÈNE / 01</span><b>De l’intuition à l’action.</b></figcaption>
           </figure>
           <div className="art-hero-orbit art-parallax-layer" data-iris-parallax="22" aria-hidden="true"><i /><i /><i /><b /></div>
@@ -179,7 +193,7 @@ export default function Home() {
             <Link className="art-text-link" href="/agence">Voir la méthode Iris <MoveRight size={18} /></Link>
           </div>
           <figure className="art-manifesto-image art-parallax-layer" data-iris-parallax="20">
-            <img src={trajectoryImages.atelier} alt="Scène documentaire d’équipe dans un environnement de travail Iris Studio" />
+            <img src={trajectoryImages.atelier} alt="Scène documentaire d’équipe dans un environnement de travail Iris Studio" loading="lazy" decoding="async" />
             <figcaption><span>ARCHIVE / 02 · ÉQUIPE &amp; MÉTHODE</span><b>Une intention cherche sa forme.</b></figcaption>
           </figure>
         </section>
@@ -199,7 +213,7 @@ export default function Home() {
         <section className="art-field" aria-labelledby="field-title">
           <div className="art-field-oversize art-parallax-layer" data-iris-parallax="-22" aria-hidden="true">FAIRE</div>
           <figure className="art-field-image art-parallax-layer" data-iris-parallax="10">
-            <img src={trajectoryImages.field} alt="Scène de préparation stratégique et de travail d’équipe autour de supports de campagne" />
+            <picture><source type="image/webp" srcSet={`${trajectoryImages.field.compact} 960w, ${trajectoryImages.field.large} 1440w`} sizes="(max-width: 760px) 100vw, 50vw" /><img src={trajectoryImages.field.large} alt="Scène de préparation stratégique et de travail d’équipe autour de supports de campagne" loading="lazy" decoding="async" width="1440" height="810" /></picture>
             <figcaption><span>ARCHIVE / 04 · STRATÉGIE &amp; TERRAIN</span><b>Les idées changent d’échelle au contact du terrain.</b></figcaption>
           </figure>
           <div className="art-field-copy">
@@ -213,8 +227,8 @@ export default function Home() {
         <section className="art-projects" aria-labelledby="home-projects-title">
           <div className="art-projects-heading"><p className="art-kicker"><span>05</span> PROJETS QUI PRENNENT VIE</p><h2 id="home-projects-title" className="impact-reveal" data-impact-reveal data-impact-stage="1">Quand une communauté<br />devient <em>la scène.</em></h2><Link className="art-text-link" href="/projets">Voir tous les projets <MoveRight size={18} /></Link></div>
           <div className="art-projects-list">
-            <LetsPlayProjectLink className="art-project art-project-primary"><div className="art-project-media art-project-media-bare art-project-media-thumbnail"><img src={partnerProjectBranding.letsPlay.thumbnail} alt={partnerProjectBranding.letsPlay.thumbnailAlt} /></div><div><p>LET’S PLAY × ALGÉRIE TÉLÉCOM</p><h3>Une émission qui fait dialoguer gaming, culture et technologie.</h3><em>Gaming · Pop culture · Tech</em><b>Découvrir <ArrowUpRight size={17} /></b></div></LetsPlayProjectLink>
-            <SevenArenaProjectLink className="art-project art-project-secondary"><div className="art-project-media art-project-media-bare art-project-media-thumbnail"><img src={partnerProjectBranding.sevenArena.thumbnail} alt={partnerProjectBranding.sevenArena.thumbnailAlt} /></div><div><p>7OUMA ARENA × DJEZZY</p><h3>Une scène compétitive pensée avec et pour sa communauté.</h3><em>E-sport · Mobile gaming · Tournois</em><b>Découvrir <ArrowUpRight size={17} /></b></div></SevenArenaProjectLink>
+            <LetsPlayProjectLink className="art-project art-project-primary"><div className="art-project-media art-project-media-bare art-project-media-thumbnail"><picture><source type="image/webp" srcSet={`${homeProjectThumbnails.letsPlay.compact} 960w, ${homeProjectThumbnails.letsPlay.large} 1440w`} sizes="(max-width: 760px) 100vw, 50vw" /><img src={homeProjectThumbnails.letsPlay.large} alt={partnerProjectBranding.letsPlay.thumbnailAlt} loading="lazy" decoding="async" width="1440" height="1080" /></picture></div><div><p>LET’S PLAY × ALGÉRIE TÉLÉCOM</p><h3>Une émission qui fait dialoguer gaming, culture et technologie.</h3><em>Gaming · Pop culture · Tech</em><b>Découvrir <ArrowUpRight size={17} /></b></div></LetsPlayProjectLink>
+            <SevenArenaProjectLink className="art-project art-project-secondary"><div className="art-project-media art-project-media-bare art-project-media-thumbnail"><picture><source type="image/webp" srcSet={`${homeProjectThumbnails.sevenArena.compact} 960w, ${homeProjectThumbnails.sevenArena.large} 1440w`} sizes="(max-width: 760px) 100vw, 50vw" /><img src={homeProjectThumbnails.sevenArena.large} alt={partnerProjectBranding.sevenArena.thumbnailAlt} loading="lazy" decoding="async" width="1440" height="1080" /></picture></div><div><p>7OUMA ARENA × DJEZZY</p><h3>Une scène compétitive pensée avec et pour sa communauté.</h3><em>E-sport · Mobile gaming · Tournois</em><b>Découvrir <ArrowUpRight size={17} /></b></div></SevenArenaProjectLink>
           </div>
         </section>
 
@@ -247,7 +261,7 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="art-contact" aria-labelledby="home-cta-title"><div className="iris-import-atmosphere" aria-hidden="true"><img className="iris-import-architecture" src="assets/iris-studio-abstract-light-architecture.webp" alt="" /><img className="iris-import-motion" src="assets/iris-studio-editorial-motion.webp" alt="" /><img className="iris-import-lens" src="assets/iris-studio-blue-lens.webp" alt="" /></div><div className="art-contact-orbit art-parallax-layer" data-iris-parallax="-16" aria-hidden="true"><i /><i /><b /></div><p className="art-kicker"><span>07</span> PROCHAIN MOUVEMENT</p><h2 id="home-cta-title" className="impact-reveal" data-impact-reveal data-impact-stage="1">Une intention mérite<br />d’aller <em>plus loin.</em></h2><Link className="art-button art-button-light" href="/contact">Construire la suite <ArrowUpRight size={18} /></Link></section>
+        <section className="art-contact" aria-labelledby="home-cta-title"><div className="iris-import-atmosphere" aria-hidden="true"><img className="iris-import-architecture" src="assets/iris-studio-abstract-light-architecture.webp" alt="" loading="lazy" decoding="async" /><img className="iris-import-motion" src="assets/iris-studio-editorial-motion.webp" alt="" loading="lazy" decoding="async" /><img className="iris-import-lens" src="assets/iris-studio-blue-lens.webp" alt="" loading="lazy" decoding="async" /></div><div className="art-contact-orbit art-parallax-layer" data-iris-parallax="-16" aria-hidden="true"><i /><i /><b /></div><p className="art-kicker"><span>07</span> PROCHAIN MOUVEMENT</p><h2 id="home-cta-title" className="impact-reveal" data-impact-reveal data-impact-stage="1">Une intention mérite<br />d’aller <em>plus loin.</em></h2><Link className="art-button art-button-light" href="/contact">Construire la suite <ArrowUpRight size={18} /></Link></section>
       </main>
       <SiteFooter />
     </div>

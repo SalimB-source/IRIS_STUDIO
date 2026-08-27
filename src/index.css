@@ -821,3 +821,6 @@ html.dark { color-scheme: dark; --background: #151515; --foreground: #f7f2ec; --
 .dark .letsplay-detail .detail-pillars span { border-color:rgba(231,219,255,.42) !important; color:#e9ddff !important; }
 .dark .letsplay-detail .detail-framework-image figcaption { color:#f7f2ec !important; }
 .dark .arena-detail .detail-pillars span { border-color:rgba(255,206,212,.42) !important; color:#ffced4 !important; }
+
+/* Découpage des routes : surface de chargement neutre pendant l’arrivée d’une page secondaire. */
+.page-route-loader { min-height:100vh; background:var(--background); }

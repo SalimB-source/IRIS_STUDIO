@@ -2,22 +2,27 @@
 import { Toaster } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import NotFound from "@/pages/NotFound";
-import About from "@/pages/About";
-import Agency from "@/pages/Agency";
-import Contact from "@/pages/Contact";
-import Expertises from "@/pages/Expertises";
 import Home from "@/pages/Home";
-import LetsPlay from "@/pages/LetsPlay";
-import OperationalProjectDetail from "@/pages/OperationalProjectDetail";
-import Projects from "@/pages/Projects";
-import SevenArena from "@/pages/SevenArena";
 import { Route, Router as WouterRouter, Switch, useLocation } from "wouter";
 import ErrorBoundary from "./components/ErrorBoundary";
 import LaunchScreen from "./components/LaunchScreen";
 import PageNavigationTransition from "./components/PageNavigationTransition";
 import { ThemeProvider } from "./contexts/ThemeContext";
-import { useEffect, useState } from "react";
+import { lazy, Suspense, useEffect, useState } from "react";
 import { isPartnerProjectPath, partnerProjectScrollSettleDelay, scrollPartnerProjectToTop, scrollToPageTop } from "./components/partnerProjectNavigation";
+
+const About = lazy(() => import("@/pages/About"));
+const Agency = lazy(() => import("@/pages/Agency"));
+const Contact = lazy(() => import("@/pages/Contact"));
+const Expertises = lazy(() => import("@/pages/Expertises"));
+const LetsPlay = lazy(() => import("@/pages/LetsPlay"));
+const OperationalProjectDetail = lazy(() => import("@/pages/OperationalProjectDetail"));
+const Projects = lazy(() => import("@/pages/Projects"));
+const SevenArena = lazy(() => import("@/pages/SevenArena"));
+
+function RouteLoadingFallback() {
+  return <main className="page-route-loader" aria-live="polite" aria-label="Chargement de la page" />;
+}
 
 function RouteScrollRestoration() {
   const [location] = useLocation();
@@ -40,7 +45,7 @@ function RouteScrollRestoration() {
 
 function RouteTree() {
   // make sure to consider if you need authentication for certain routes
-  return <><RouteScrollRestoration /><Switch>
+  return <><RouteScrollRestoration /><Suspense fallback={<RouteLoadingFallback />}><Switch>
     <Route path="/" component={Home} />
     <Route path="/a-propos" component={About} />
     <Route path="/agence" component={Agency} />
@@ -52,7 +57,7 @@ function RouteTree() {
     <Route path="/contact" component={Contact} />
     <Route path="/404" component={NotFound} />
     <Route component={NotFound} />
-  </Switch></>;
+  </Switch></Suspense></>;
 }
 
 function AppShell() {
