@@ -26,6 +26,7 @@ import {
   sevenArenaVisuals,
   sevenArenaVoices,
 } from "./sevenArenaContent";
+import "./ArenaVoiceRoster.css";
 
 function ArenaVisualCarousel() {
   const [api, setApi] = useState<CarouselApi>();

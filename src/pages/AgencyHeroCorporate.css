@@ -1,0 +1,8 @@
+/* Direction « Portfolio Iris » : un héros documentaire, lumineux et éditorial où l’action d’équipe se concentre à droite afin de laisser le titre respirer à gauche. */
+.page-hero-agency .page-hero-photo { background-position:67% center; }
+.page-hero-agency .page-hero-shade { background:linear-gradient(90deg,rgba(8,13,20,.96) 0%,rgba(8,13,20,.84) 35%,rgba(8,13,20,.5) 60%,rgba(8,13,20,.08) 100%); }
+.page-hero-agency .page-hero-ray { right:11%; width:10rem; background:linear-gradient(180deg,rgba(231,67,58,.5),rgba(242,138,67,.08)); mix-blend-mode:screen; }
+.page-hero-agency .page-hero-inner { max-width:54rem; }
+.page-hero-agency .page-hero-inner > p:not(.eyebrow) { max-width:32rem; }
+.page-hero-agency .agency-hero-dossier { color:rgba(255,253,249,.84); }
+@media (max-width:760px) { .page-hero-agency .page-hero-photo { background-position:62% center; }.page-hero-agency .page-hero-shade { background:linear-gradient(90deg,rgba(8,13,20,.92),rgba(8,13,20,.63) 56%,rgba(8,13,20,.18)); }.page-hero-agency .page-hero-ray { right:7%; width:6rem; opacity:.58; } }
