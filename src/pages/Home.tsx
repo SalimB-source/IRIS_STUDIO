@@ -190,7 +190,6 @@ export default function Home() {
           </div>
           <div className="art-proof-numbers">
             {irisPublishedFigures.map((figure, index) => <article className="impact-reveal" data-impact-reveal data-impact-stage={String(index + 1)} key={figure.label}><span>{figure.index} / REPÈRE</span><strong>{figure.value}</strong><p>{figure.label}</p></article>)}
-            <p className="art-proof-source">Repères publiés dans l’archive IRIS Studio #Vision2025 ; ils sont présentés comme un instantané de communication, non comme des données mises à jour en temps réel.</p>
           </div>
           <div className="art-proof-line art-parallax-layer" data-iris-parallax="28" aria-hidden="true"><i /><i /></div>
         </section>
