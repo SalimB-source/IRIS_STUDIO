@@ -381,7 +381,21 @@ export default function SevenArena() {
           <div className="arena-voices-grid">
             {sevenArenaVoices.map((voice, index) => (
               <a className={`arena-voice arena-voice--${voice.id}`} href={voice.href} target="_blank" rel="noreferrer" key={voice.id} aria-label={`Consulter la source publique de ${voice.name}`}>
-                <figure>
+                <figure
+                  style={{
+                    display: "block",
+                    alignSelf: "flex-start",
+                    flex: "0 0 4.5rem",
+                    width: "4.5rem",
+                    height: "4.5rem",
+                    minHeight: "4.5rem",
+                    margin: "1rem 0",
+                    borderRadius: "50%",
+                    overflow: "hidden",
+                    gridColumn: "auto",
+                    gridRow: "auto",
+                  }}
+                >
                   <img src={voice.image} alt={voice.imageAlt} />
                   <figcaption>{voice.imageNote}</figcaption>
                 </figure>
