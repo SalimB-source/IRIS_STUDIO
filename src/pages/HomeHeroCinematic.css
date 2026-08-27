@@ -10,7 +10,7 @@
 .art-home .art-hero--cinematic::after { position:absolute; z-index:-1; inset:0; border:0; border-radius:0; background:linear-gradient(90deg,rgba(0,0,0,.91) 0%,rgba(0,0,0,.7) 39%,rgba(0,0,0,.15) 75%,rgba(0,0,0,.62) 100%),linear-gradient(0deg,rgba(0,0,0,.92) 0%,transparent 34%); content:""; transform:none; }
 .art-home .art-hero--cinematic .art-hero-visual { position:absolute; z-index:-2; inset:0; width:100%; height:100%; margin:0; padding:0; background:#070707; box-shadow:none; }
 .art-home .art-hero--cinematic .art-hero-visual::before { top:auto; right:clamp(1.5rem,4vw,4.5rem); bottom:clamp(2rem,4vw,4.5rem); left:auto; width:clamp(4rem,7vw,7rem); height:clamp(4rem,7vw,7rem); border-color:rgba(255,255,255,.35); }
-.art-home .art-hero--cinematic .art-hero-visual img { width:100%; height:100%; aspect-ratio:auto; object-fit:cover; object-position:69% center; filter:grayscale(1) contrast(1.14) brightness(.88); }
+.art-home .art-hero--cinematic .art-hero-visual img { width:100%; height:100%; aspect-ratio:auto; object-fit:cover; object-position:69% center; filter:saturate(.76) contrast(1.14) brightness(.82); }
 .art-home .art-hero--cinematic .art-hero-visual figcaption { right:clamp(1.5rem,7vw,7rem); bottom:clamp(2rem,4.5vw,4.5rem); left:auto; width:min(17rem,24vw); padding:.7rem 0 0; border-top:1px solid rgba(255,255,255,.45); background:transparent; color:#fff; }
 .art-home .art-hero--cinematic .art-hero-visual figcaption span { color:#f28a43; }
 .art-home .art-hero--cinematic .art-hero-visual figcaption b { max-width:11rem; font-size:clamp(1.1rem,1.45vw,1.45rem); line-height:.92; text-align:right; }

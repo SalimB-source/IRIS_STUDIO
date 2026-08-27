@@ -18,8 +18,8 @@ import "./HomeBrandMarquee.css";
 import "./HomeHeroCinematic.css";
 
 const heroVisual = {
-  src: "assets/iris-cinematic-hero-campaign.png",
-  alt: "Portrait cinématographique d’une directrice de création dans un studio sombre",
+  src: "assets/iris-rebai-chentli-cinematic-hero.png",
+  alt: "Portrait cinématographique de Rebai Chentli dans un studio sombre",
 };
 
 const trajectoryImages = {
