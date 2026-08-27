@@ -19,8 +19,8 @@ import "./HomeHeroCinematic.css";
 import "./HomeProofFigures.css";
 
 const heroVisuals = {
-  day: "assets/iris-hero-director-day.webp",
-  night: "assets/iris-hero-director-night.webp",
+  day: "assets/iris-hero-director-day-windowed.webp",
+  night: "assets/iris-hero-director-night-windowed.webp",
   alt: "Portrait de Rebai Chentli face à Alger, depuis un bureau panoramique",
 };
 
