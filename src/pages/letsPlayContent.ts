@@ -55,6 +55,18 @@ export const letsPlayScreenings = [
 
 export const letsPlayFeaturedScreening = letsPlayScreenings[0];
 
+export const letsPlayTclReview = {
+  category: "REVIEW TECH · TCL",
+  index: "REVIEW / 03",
+  duration: "13:28",
+  title: "TCL C6K QD-MiniLED: The Ultimate 144 Hz Gaming TV Reveal!",
+  summary:
+    "Un épisode de Let’s Play consacré à la TCL C6K QD-MiniLED, publié dans la sélection Technology de la chaîne officielle.",
+  image: "assets/letsplay-tcl-c6k-review.jpg",
+  imageAlt: "Miniature officielle de la review Let’s Play consacrée à la TCL C6K QD-MiniLED",
+  href: "https://www.youtube.com/watch?v=OEc9V9s3qu4",
+} as const;
+
 export const letsPlayInstagramVisuals = [
   {
     id: "gccdz-media-partner",
