@@ -10,4 +10,9 @@ export const brandPartners = [
   { name: "Djezzy", logo: "assets/djezzy-logo_827e6b0c.svg" },
   { name: "EGOR", logo: "assets/egor-logo-fourni.webp" },
   { name: "Lafarge", logo: "assets/lafarge-logo_cd94104e.png" },
+  { name: "LG", logo: "assets/lg-logo.png" },
+  { name: "Ferrero", logo: "assets/ferrero-logo.png" },
+  { name: "Epiroc", logo: "assets/epiroc-logo.png" },
+  { name: "Ifri", logo: "assets/ifri-logo.png" },
+  { name: "TCL", logo: "assets/tcl-logo.png" },
 ] as const;
