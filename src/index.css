@@ -763,15 +763,15 @@ html.dark { color-scheme: dark; --background: #151515; --foreground: #f7f2ec; --
   .brand-logo { height: 2.35rem; }
 }
 
-/* Variante blanche exacte du logo horizontal pour les en-têtes sombres. */
-.brand-logo--white { filter: grayscale(1) brightness(0) invert(1); }
+/* Variante blanche exacte fournie pour les en-têtes sombres : conserver le blanc et l’œil orange sans filtre. */
+.brand-logo--white { filter: none; }
 
 /* L’accueil conserve un en-tête sombre en thème clair : le mot-symbole doit y rester blanc. */
 .art-home .brand-logo { filter: grayscale(1) brightness(0) invert(1); }
 
-/* Priorité au blanc pour le nouveau logo horizontal, y compris lorsque les anciens styles de thème utilisent !important. */
+/* Le thème sombre préserve l’image fournie, y compris son œil orange, malgré les anciens styles prioritaires. */
 .dark .brand-logo-wrap img.brand-logo--white,
-.dark .art-home .brand-logo { filter: grayscale(1) brightness(0) invert(1) !important; }
+.dark .art-home .brand-logo { filter: none !important; }
 
 /* Carrousel 7ouma Arena — galerie éditoriale verticale : chaque publication adopte le cadre Instagram 4:5, avec une lecture dense, rouge et immersive. */
 .arena-detail .arena-visual-carousel-item { flex-basis:min(72vw,24rem); }
