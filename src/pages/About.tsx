@@ -11,6 +11,7 @@ import { SiteFooter, SiteHeader } from "@/components/SiteChrome";
 import "./About.css";
 import "./AboutRefinement.css";
 import "./AboutPortraitPlaceholders.css";
+import "./AboutLetsPlayLayout.css";
 
 const roleIcons = {
   direction: BriefcaseBusiness,
