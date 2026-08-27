@@ -1,0 +1,13 @@
+/* Direction section 03 : des chiffres de terrain traités comme un relevé éditorial sombre, lisible et structuré par les coordonnées IRIS. */
+.art-proof { align-items:start; background:#202020; border-color:rgba(255,255,255,.18); color:#fff; }
+.art-proof .art-kicker { color:#fff; }.art-proof .art-kicker span { border-color:#f28a43; color:#f28a43; }
+.art-proof h2 { max-width:11ch; color:#fff; }.art-proof h2 em { color:#f28a43; }
+.art-proof-intro { max-width:27rem; margin:1.7rem 0 0; color:rgba(255,255,255,.68); font-size:.89rem; line-height:1.78; }
+.art-proof-numbers { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:1px; border:1px solid rgba(255,255,255,.24); background:rgba(255,255,255,.24); }
+.art-proof-numbers article { display:flex; min-height:12.4rem; flex-direction:column; align-items:flex-start; gap:0; border:0; padding:1.15rem 1.25rem; background:#202020; }
+.art-proof-numbers span { color:rgba(255,255,255,.57); font-size:.5rem; letter-spacing:.1em; }.art-proof-numbers strong { margin:auto 0 .58rem; color:#f28a43; font-size:clamp(3.8rem,5vw,6.25rem); letter-spacing:-.085em; line-height:.75; }.art-proof-numbers p { margin:0; color:#fff; font-size:.58rem; font-weight:800; letter-spacing:.085em; line-height:1.45; text-transform:uppercase; }
+.art-proof-source { grid-column:1 / -1; margin:0; padding:1rem 1.25rem; background:#202020; color:rgba(255,255,255,.52); font-size:.53rem; font-weight:700; letter-spacing:.075em; line-height:1.62; text-transform:uppercase; }
+.art-proof-line { z-index:1; border-color:rgba(242,138,67,.42); opacity:.68; }.art-proof-line i { background:rgba(231,67,58,.66); }.art-proof-line i:last-child { background:#f28a43; }
+.dark .art-proof { background:#171717; }.dark .art-proof-numbers article,.dark .art-proof-source { background:#171717; }
+@media (max-width:960px) { .art-proof { grid-template-columns:1fr; }.art-proof-sticky { position:relative; top:auto; }.art-proof-numbers { max-width:48rem; }.art-proof-line { right:-11%; width:55%; } }
+@media (max-width:640px) { .art-proof { gap:2.6rem; padding-top:5.5rem; padding-bottom:5.5rem; }.art-proof h2 { max-width:10ch; }.art-proof-intro { max-width:22rem; font-size:.82rem; }.art-proof-numbers { grid-template-columns:repeat(2,minmax(0,1fr)); }.art-proof-numbers article { min-height:8.7rem; padding:1rem .85rem; }.art-proof-numbers strong { margin:auto 0 .42rem; font-size:clamp(3.35rem,15vw,4.2rem); }.art-proof-numbers p { font-size:.49rem; }.art-proof-source { padding:.9rem .85rem; font-size:.46rem; }.art-proof-line { right:-44%; bottom:4%; width:86%; height:25%; } }

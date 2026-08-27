@@ -16,6 +16,7 @@ import "./HomeArtistic.css";
 import "./HomeArtisticResponsive.css";
 import "./HomeBrandMarquee.css";
 import "./HomeHeroCinematic.css";
+import "./HomeProofFigures.css";
 
 const heroVisual = {
   src: "assets/iris-rebai-chentli-cinematic-hero.png",
@@ -26,6 +27,15 @@ const trajectoryImages = {
   atelier: "assets/iris-team-documentary_eceff224.jpg",
   field: "assets/iris-hero-retail-campaign_47119dc3.jpg",
 };
+
+const irisPublishedFigures = [
+  { index: "01", value: "3", label: "directions" },
+  { index: "02", value: "268", label: "employés" },
+  { index: "03", value: "180", label: "véhicules" },
+  { index: "04", value: "+25", label: "clients" },
+  { index: "05", value: "+38", label: "wilayas" },
+  { index: "06", value: "4", label: "missions" },
+] as const;
 
 function useParallaxTrajectory() {
   useEffect(() => {
@@ -175,12 +185,12 @@ export default function Home() {
         <section className="art-proof" aria-labelledby="proof-title">
           <div className="art-proof-sticky">
             <p className="art-kicker"><span>03</span> REPÈRES PUBLIÉS / VISION 2025</p>
-            <h2 id="proof-title" className="impact-reveal" data-impact-reveal data-impact-stage="1">L’impact se<br />lit aussi dans<br /><em>la portée.</em></h2>
+            <h2 id="proof-title" className="impact-reveal" data-impact-reveal data-impact-stage="1">Une présence qui<br />se lit <em>sur le terrain.</em></h2>
+            <p className="art-proof-intro">Un instantané de l’organisation et de ses opérations, tel que présenté dans la publication institutionnelle « Vision 2025 ».</p>
           </div>
           <div className="art-proof-numbers">
-            <article className="impact-reveal" data-impact-reveal data-impact-stage="1"><span>01 / ANCRAGE</span><strong>2007</strong><p>année d’ancrage revendiquée par le studio.</p></article>
-            <article className="impact-reveal" data-impact-reveal data-impact-stage="2"><span>02 / PORTÉE</span><strong>+38</strong><p>wilayas dans le repère de déploiement publié.</p></article>
-            <article className="impact-reveal" data-impact-reveal data-impact-stage="3"><span>03 / MÉTIERS</span><strong>04</strong><p>missions réunies autour de la stratégie, de la création et du terrain.</p></article>
+            {irisPublishedFigures.map((figure, index) => <article className="impact-reveal" data-impact-reveal data-impact-stage={String(index + 1)} key={figure.label}><span>{figure.index} / REPÈRE</span><strong>{figure.value}</strong><p>{figure.label}</p></article>)}
+            <p className="art-proof-source">Repères publiés dans l’archive IRIS Studio #Vision2025 ; ils sont présentés comme un instantané de communication, non comme des données mises à jour en temps réel.</p>
           </div>
           <div className="art-proof-line art-parallax-layer" data-iris-parallax="28" aria-hidden="true"><i /><i /></div>
         </section>
