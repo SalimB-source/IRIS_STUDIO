@@ -4,7 +4,7 @@
  * Les mouvements sont décoratifs, limités et désactivés lorsque la réduction des animations est demandée.
  */
 import { useEffect } from "react";
-import { ArrowDown, ArrowUpRight, MoveRight, Play } from "lucide-react";
+import { ArrowDown, ArrowUpRight, Instagram, Linkedin, MoveRight, Play } from "lucide-react";
 import { Link } from "wouter";
 import { SiteFooter, SiteHeader } from "@/components/SiteChrome";
 import LetsPlayProjectLink from "@/components/LetsPlayProjectLink";
@@ -128,6 +128,7 @@ export default function Home() {
             <h1 id="home-title" className="impact-title-lines" data-impact-reveal data-impact-stage="1"><span>Les idées</span><span>prennent <em>le terrain.</em></span></h1>
             <p className="art-hero-intro">Stratégies, campagnes et formats de marque conçus pour devenir des expériences vécues — dans les lieux, les usages et les communautés qui comptent.</p>
             <div className="art-hero-actions"><Link className="art-button art-button-main" href="/contact">Ouvrir un projet <ArrowUpRight size={17} /></Link><Link className="art-text-link" href="/agence">Entrer dans le studio <MoveRight size={18} /></Link></div>
+            <nav className="art-hero-socials" aria-label="Réseaux sociaux Iris Studio"><span>IRIS / EN LIGNE</span><a href="https://www.instagram.com/iris_studio_marketing/" target="_blank" rel="noreferrer" aria-label="Suivre Iris Studio sur Instagram"><Instagram size={15} aria-hidden="true" /></a><a href="https://www.linkedin.com/company/iris-studio-alger/" target="_blank" rel="noreferrer" aria-label="Suivre Iris Studio sur LinkedIn"><Linkedin size={15} aria-hidden="true" /></a></nav>
           </div>
           <figure className="art-hero-visual art-parallax-layer" data-iris-parallax="-10">
             <img src={heroVisual.src} alt={heroVisual.alt} />
