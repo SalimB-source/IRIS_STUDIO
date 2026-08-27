@@ -4,7 +4,7 @@
  * avec des archives officielles cadrées par Iris. Chaque média conserve sa provenance
  * publique, sa légende et un repère de campagne clair.
  */
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState, type CSSProperties } from "react";
 import { ArrowLeft, ArrowUpRight, Instagram, Play, Youtube } from "lucide-react";
 import { Link } from "wouter";
 import { partnerProjectBranding } from "@/components/partnerProjectBranding";
@@ -138,6 +138,35 @@ function ArenaVisualCarousel() {
 
 export default function SevenArena() {
   const brand = partnerProjectBranding.sevenArena;
+  const voicesGridRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+
+    const cards = Array.from(voicesGridRef.current?.querySelectorAll<HTMLElement>(".arena-voice") ?? []);
+    if (!cards.length) return;
+
+    cards.forEach((card) => card.classList.add("is-scroll-reveal-ready"));
+
+    if (!("IntersectionObserver" in window)) {
+      cards.forEach((card) => card.classList.add("is-revealed"));
+      return;
+    }
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (!entry.isIntersecting) return;
+          entry.target.classList.add("is-revealed");
+          observer.unobserve(entry.target);
+        });
+      },
+      { threshold: 0.18, rootMargin: "0px 0px -6% 0px" },
+    );
+
+    cards.forEach((card) => observer.observe(card));
+    return () => observer.disconnect();
+  }, []);
 
   return (
     <div className="page-shell project-detail arena-detail">
@@ -378,9 +407,17 @@ export default function SevenArena() {
             <span>ROSTER / {String(sevenArenaVoices.length).padStart(2, "0")} PROFILS</span>
             <p>Une sélection visuelle pensée comme un mur de jeu : chaque voix est maintenant visible au même niveau que le format qu’elle anime.</p>
           </div>
-          <div className="arena-voices-grid">
+          <div className="arena-voices-grid" ref={voicesGridRef}>
             {sevenArenaVoices.map((voice, index) => (
-              <a className={`arena-voice arena-voice--${voice.id}`} href={voice.href} target="_blank" rel="noreferrer" key={voice.id} aria-label={`Consulter la source publique de ${voice.name}`}>
+              <a
+                className={`arena-voice arena-voice--${voice.id}`}
+                href={voice.href}
+                target="_blank"
+                rel="noreferrer"
+                key={voice.id}
+                aria-label={`Consulter la source publique de ${voice.name}`}
+                style={{ "--arena-reveal-delay": `${Math.min(index, 7) * 60}ms` } as CSSProperties}
+              >
                 <figure
                   style={{
                     display: "block",
