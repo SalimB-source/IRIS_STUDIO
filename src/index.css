@@ -832,3 +832,6 @@ html.dark { color-scheme: dark; --background: #151515; --foreground: #f7f2ec; --
 
 /* Découpage des routes : surface de chargement neutre pendant l’arrivée d’une page secondaire. */
 .page-route-loader { min-height:100vh; background:var(--background); }
+
+/* Logos partenaires : rendu blanc demandé uniquement lorsque le thème sombre est actif. */
+.dark .mon-logo { filter: brightness(0) invert(1); }

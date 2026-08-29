@@ -527,7 +527,7 @@ export default function About() {
               <div className="about-client-marquee" aria-label="Logos des marques citées par Iris Studio">
                 <div className="about-client-marquee-track">
                   {[0, 1].map((setIndex) => <div className="about-client-marquee-set" aria-hidden={setIndex === 1} key={setIndex}>
-                    {brandPartners.map((client) => <span key={`${client.name}-${setIndex}`}><img src={client.logo} alt={setIndex === 0 ? `Logo ${client.name}` : ""} loading="lazy" decoding="async" /></span>)}
+                    {brandPartners.map((client) => <span key={`${client.name}-${setIndex}`}><img className="mon-logo" src={client.logo} alt={setIndex === 0 ? `Logo ${client.name}` : ""} loading="lazy" decoding="async" /></span>)}
                   </div>)}
                 </div>
               </div>

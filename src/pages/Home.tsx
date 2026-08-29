@@ -175,7 +175,7 @@ export default function Home() {
               {[0, 1].map((setIndex) => (
                 <div className="art-brand-marquee-set" aria-hidden={setIndex === 1} key={setIndex}>
                   {brandPartners.map((client) => (
-                    <span className={client.name === "EGOR" ? "is-egor-logo" : undefined} key={`${client.name}-${setIndex}`}><img src={client.logo} alt={setIndex === 0 ? `Logo ${client.name}` : ""} loading="lazy" decoding="async" /></span>
+                    <span className={client.name === "EGOR" ? "is-egor-logo" : undefined} key={`${client.name}-${setIndex}`}><img className="mon-logo" src={client.logo} alt={setIndex === 0 ? `Logo ${client.name}` : ""} loading="lazy" decoding="async" /></span>
                   ))}
                 </div>
               ))}
