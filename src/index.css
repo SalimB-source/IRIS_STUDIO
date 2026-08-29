@@ -819,6 +819,21 @@ html.dark { color-scheme: dark; --background: #151515; --foreground: #f7f2ec; --
 @media (max-width:760px) { .arena-detail .arena-voices-roster-note { grid-template-columns:1fr; gap:.7rem; }.arena-detail .arena-voices-grid { grid-template-columns:repeat(2,minmax(0,1fr)); gap:.7rem; }.arena-detail .arena-voice { min-height:18.7rem; grid-template-columns:1.55rem 1fr auto; grid-template-rows:9.2rem minmax(6.6rem,auto); gap:0 .45rem; padding:0 .72rem .72rem; }.arena-detail .arena-voice figure { width:calc(100% + 1.44rem); height:9.2rem; margin:0 -.72rem .72rem; }.arena-detail .arena-voice strong { font-size:1.25rem; }.arena-detail .arena-voice p { font-size:.57rem; line-height:1.48; }.arena-detail .arena-voice figcaption { right:.6rem; bottom:.52rem; left:.6rem; font-size:.43rem; }.arena-detail .arena-voice > span { font-size:.54rem; } }
 @media (prefers-reduced-motion:reduce) { .arena-detail .arena-voice,.arena-detail .arena-voice::before,.arena-detail .arena-voice figure img,.arena-detail .arena-voice > svg { transition:none; }.arena-detail .arena-voice:hover,.arena-detail .arena-voice:hover > svg { transform:none; }.arena-detail .arena-voice:hover::before { transform:scaleY(.42); }.arena-detail .arena-voice:hover figure img { transform:none; } }
 
+/* Expertises — chaque savoir-faire possède un repère visuel et une réponse au survol sans modifier le contenu. */
+.expertise-row { position: relative; overflow: hidden; background: transparent; transition: background 220ms var(--ease-out); }
+.expertise-row::before { position: absolute; top: 0; bottom: 0; left: 0; width: .2rem; background: #e7433a; content: ""; transform: scaleY(.28); transform-origin: center; transition: transform 220ms var(--ease-out); }
+.expertise-row-title { display: grid; grid-template-columns: 2.6rem minmax(0, 1fr); gap: .9rem; align-items: start; min-width: 0; }.expertise-row-title p { margin: 0 0 .55rem; color: #e7433a; font-size: .65rem; font-weight: 800; letter-spacing: .12em; text-transform: uppercase; }
+.expertise-row-icon { display: grid; width: 2.6rem; height: 2.6rem; place-items: center; border: 1px solid rgba(231,67,58,.38); border-radius: 50%; background: rgba(231,67,58,.06); color: #e7433a; transition: background 220ms var(--ease-out), border-color 220ms var(--ease-out), color 220ms var(--ease-out), transform 220ms var(--ease-out), box-shadow 220ms var(--ease-out); }
+.expertise-row-icon svg { display: block; }
+.expertise-row:hover, .expertise-row:focus-within { background: rgba(231,67,58,.045); }
+.expertise-row:hover::before, .expertise-row:focus-within::before { transform: scaleY(1); }
+.expertise-row:hover .expertise-row-icon, .expertise-row:focus-within .expertise-row-icon { border-color: #e7433a; background: #e7433a; color: #fffdf9; transform: translateY(-.12rem) rotate(-6deg) scale(1.05); box-shadow: 0 .45rem 0 rgba(231,67,58,.12); }
+.dark .expertise-row:hover, .dark .expertise-row:focus-within { background: rgba(242,138,67,.08); }
+.dark .expertise-row-icon { border-color: rgba(242,138,67,.42); background: rgba(242,138,67,.08); color: #f28a43; }
+.dark .expertise-row:hover .expertise-row-icon, .dark .expertise-row:focus-within .expertise-row-icon { border-color: #f28a43; background: #f28a43; color: #202020; box-shadow: 0 .45rem 0 rgba(242,138,67,.12); }
+@media (max-width: 760px) { .expertise-row-title { grid-template-columns: 2.3rem minmax(0, 1fr); gap: .7rem; }.expertise-row-icon { width: 2.3rem; height: 2.3rem; }.expertise-row-icon svg { width: 19px; height: 19px; } }
+@media (prefers-reduced-motion: reduce) { .expertise-row, .expertise-row::before, .expertise-row-icon { transition: none; }.expertise-row:hover .expertise-row-icon, .expertise-row:focus-within .expertise-row-icon { transform: none; } }
+
 /* Verrou de lisibilité : les liens éditoriaux restent contrastés sur toutes les surfaces sombres. */
 .dark .page-shell main > section:not(.art-contact) .arrow-link { border-color:rgba(247,242,236,.58) !important; color:#f7f2ec !important; }
 .dark .page-shell main > section:not(.art-contact) .arrow-link svg { color:inherit !important; }
