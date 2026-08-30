@@ -850,3 +850,8 @@ html.dark { color-scheme: dark; --background: #151515; --foreground: #f7f2ec; --
 
 /* Logos partenaires : rendu blanc demandé uniquement lorsque le thème sombre est actif. */
 .dark .mon-logo { filter: brightness(0) invert(1); }
+
+/* Les liens du manifesto rapprochent les expertises et le profil communautaire sans alourdir la section. */
+.agency-manifesto-links { display: flex; flex-wrap: wrap; align-items: center; gap: .8rem 1.6rem; margin-top: 2rem; }
+.agency-manifesto-links .arrow-link { margin-top: 0; }
+@media (max-width: 640px) { .agency-manifesto-links { align-items: flex-start; flex-direction: column; gap: .9rem; } }

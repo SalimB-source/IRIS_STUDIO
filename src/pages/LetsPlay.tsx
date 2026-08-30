@@ -4,7 +4,7 @@
  * Chaque média conserve sa provenance publique, sa légende et un repère de campagne clair.
  */
 import { useEffect, useState } from "react";
-import { ArrowLeft, ArrowUpRight, Instagram, Play, Youtube } from "lucide-react";
+import { ArrowLeft, ArrowUpRight, Brush, Clapperboard, Instagram, Linkedin, Mic2, PenLine, Play, type LucideIcon, UsersRound, Youtube } from "lucide-react";
 import { Link } from "wouter";
 import { partnerProjectBranding } from "@/components/partnerProjectBranding";
 import { SiteFooter, SiteHeader } from "@/components/SiteChrome";
@@ -19,12 +19,52 @@ import {
 import {
   letsPlayDossiers,
   letsPlayFeaturedScreening,
+  letsPlayTeam,
   letsPlayInstagramVisuals,
   letsPlayScreenings,
   letsPlayTclReview,
 } from "./letsPlayContent";
 import "./LetsPlayTclReview.css";
 import "./LetsPlayGamingHero.css";
+import "./LetsPlayMembers.css";
+
+const letsPlayRoleIcons: Record<string, LucideIcon> = {
+  editorial: PenLine,
+  community: UsersRound,
+  graphicDesign: Brush,
+  videoEditing: Clapperboard,
+  presentation: Mic2,
+};
+
+function LetsPlayMemberCard({ person, index }: { person: (typeof letsPlayTeam)[number]; index: number }) {
+  const RoleIcon = letsPlayRoleIcons[person.roleIcon] ?? UsersRound;
+  return (
+    <article className="letsplay-member-card">
+      <div className="letsplay-member-card-top"><span>ÉQUIPE / 0{index + 1}</span><RoleIcon size={18} strokeWidth={1.7} aria-hidden="true" /></div>
+      <figure className="letsplay-member-card-portrait">
+        <img src={person.portrait} alt={person.portraitAlt} loading="lazy" decoding="async" />
+        <figcaption>{person.marker} · {person.portraitCaption}</figcaption>
+      </figure>
+      <p className="letsplay-member-card-role"><RoleIcon size={14} strokeWidth={1.8} aria-hidden="true" />{person.role}</p>
+      <h3>{person.name}</h3>
+      <p className="letsplay-member-card-bio">{person.text}</p>
+      {"episode" in person && person.episode ? (
+        <a className="letsplay-member-card-episode" href={person.episode.url} target="_blank" rel="noreferrer">
+          <Play size={13} fill="currentColor" aria-hidden="true" />
+          <span>{person.episode.label}</span>
+          <ArrowUpRight size={13} aria-hidden="true" />
+        </a>
+      ) : null}
+      {person.source ? (
+        <a className="letsplay-member-card-link" href={person.source} target="_blank" rel="noreferrer">
+          {person.sourceLabel ?? "Voir le profil"} <Linkedin size={14} aria-hidden="true" /> <ArrowUpRight size={14} aria-hidden="true" />
+        </a>
+      ) : (
+        <span className="letsplay-member-card-pending">Profil professionnel non associé publiquement</span>
+      )}
+    </article>
+  );
+}
 
 function LetsPlayInstagramCarousel() {
   const [api, setApi] = useState<CarouselApi>();
@@ -107,6 +147,7 @@ export default function LetsPlay() {
     <section id="letsplay-focus" className="letsplay-featured-screening section-pad project-progress-target" aria-labelledby="letsplay-featured-title"><div className="letsplay-featured-heading"><p className="eyebrow">Focus principal</p><span>ARCHIVE VIDÉO / 01</span></div><a className="letsplay-featured-card" href={letsPlayFeaturedScreening.href} target="_blank" rel="noreferrer"><figure><img src={letsPlayFeaturedScreening.image} alt={`Miniature officielle : ${letsPlayFeaturedScreening.title}`} /><span className="letsplay-featured-play" aria-hidden="true"><Play size={30} fill="currentColor" /></span><figcaption>{letsPlayFeaturedScreening.category}</figcaption></figure><div><p>{letsPlayFeaturedScreening.detail}</p><h2 className="display-title" id="letsplay-featured-title">Un terrain,<br /><em>une histoire à vivre.</em></h2><h3>{letsPlayFeaturedScreening.title}</h3><span>Regarder le reportage <ArrowUpRight size={18} /></span></div></a></section>
     <section id="letsplay-instagram" className="letsplay-instagram section-pad project-progress-target" aria-labelledby="letsplay-instagram-title"><div className="letsplay-instagram-heading"><div><p className="eyebrow">Publications Instagram</p><h2 className="display-title" id="letsplay-instagram-title">La pop culture<br /><em>en pleine partie.</em></h2></div><p>Une sélection de visuels Let’s Play fournis pour ce site, reliés au compte Instagram officiel du projet.</p></div><LetsPlayInstagramCarousel /></section>
     <section className="letsplay-screenings section-pad" aria-labelledby="letsplay-screenings-title"><div className="letsplay-screenings-heading"><div><p className="eyebrow">Sélection d’épisodes</p><h2 className="display-title" id="letsplay-screenings-title">Des sujets qui font<br /><em>vivre la partie.</em></h2></div><p>Sept épisodes de la chaîne officielle Let’s Play, entre gaming, technologie, création et pop culture. Chaque miniature ouvre directement la vidéo associée sur YouTube.</p></div><div className="letsplay-screening-grid">{letsPlayScreenings.map((screening) => <a className="letsplay-screening-card" href={screening.href} target="_blank" rel="noreferrer" key={screening.id} aria-label={`Regarder ${screening.title} sur YouTube`}><figure><img src={screening.image} alt={`Miniature officielle : ${screening.title}`} loading="lazy" decoding="async" width="1280" height="720" /><span className="letsplay-play-mark" aria-hidden="true"><Play size={19} fill="currentColor" /></span><figcaption>{screening.category}</figcaption></figure><div><p>{screening.detail}</p><h3>{screening.title}</h3><p className="letsplay-screening-summary">{screening.summary}</p><span>Regarder sur YouTube <ArrowUpRight size={16} /></span></div></a>)}</div></section>
+    <section id="letsplay-members" className="letsplay-members section-pad" aria-labelledby="letsplay-members-title"><div className="letsplay-members-heading"><div><p className="eyebrow">Crédits de fabrication</p><h2 className="display-title" id="letsplay-members-title">Une émission portée par<br /><em>plusieurs regards.</em></h2></div><p>Les membres ci-dessous sont repris de la section équipe de la page À propos. Les cartes distinguent les fonctions éditoriales, communautaires, créatives et de présentation documentées par Iris Studio.</p></div><div className="letsplay-members-grid">{letsPlayTeam.map((person, index) => <LetsPlayMemberCard person={person} index={index} key={person.name} />)}</div><p className="letsplay-members-source">Crédits issus des informations communiquées par Iris Studio et des profils professionnels publics associés. Les liens LinkedIn peuvent demander une connexion selon la session.</p></section>
     <section className="detail-links section-pad"><p className="eyebrow">Suivre Let’s Play</p><div><a href="https://www.youtube.com/@letsplay.officiel" target="_blank" rel="noreferrer"><Youtube size={23} /><span>Voir la chaîne<br /><strong>YouTube</strong></span><ArrowUpRight size={21} /></a><a href="https://www.instagram.com/letsplay.officiel/" target="_blank" rel="noreferrer"><Instagram size={23} /><span>Suivre les actus<br /><strong>Instagram</strong></span><ArrowUpRight size={21} /></a></div></section>
   </main><SiteFooter /></div>;
 }

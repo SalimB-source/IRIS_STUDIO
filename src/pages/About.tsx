@@ -9,6 +9,7 @@ import { ArrowUpRight, BarChart3, BriefcaseBusiness, Brush, Clapperboard, Linked
 import { Link } from "wouter";
 import { SiteFooter, SiteHeader } from "@/components/SiteChrome";
 import { partnerProjectBranding } from "@/components/partnerProjectBranding";
+import { letsPlayTeam } from "./letsPlayContent";
 import "./About.css";
 import "./AboutRefinement.css";
 import "./AboutPortraitPlaceholders.css";
@@ -150,90 +151,6 @@ export const leadership = [
     alt: "Portrait public de Hadjer Mezhoud",
     profile: "https://www.linkedin.com/in/hadjer-mezhoud-a95b9969",
     roleIcon: "direction" as const,
-  },
-];
-
-export const letsPlayTeam = [
-  {
-    name: "Chafai Benamara · Chaft",
-    role: "Éditeur en chef · gaming, cinéma & tech",
-    text: "Éditeur en chef Gaming, Cinéma et Tech chez Iris Studio, Chafai Benamara est aussi identifié publiquement comme Editor in Chief & Host. À travers Let’s Play, il porte la conversation éditoriale entre jeu vidéo, culture, technologies et communauté.",
-    marker: "ÉDITO",
-    roleIcon: "editorial" as const,
-    portrait: "assets/chafai-benamara-provided_1faa62af.jpg",
-    portraitAlt: "Portrait fourni de Chafai Benamara",
-    portraitCaption: "Portrait fourni / Chafai Benamara",
-    source: "https://dz.linkedin.com/in/chafai-benamara-b7b87316",
-    sourceLabel: "Voir le profil LinkedIn",
-    linkedin: true,
-  },
-  {
-    name: "Rebai Chentli",
-    role: "Directeur d’agence · Co-animateur, Cinéma ta3 El 7it",
-    text: "Directeur de l’agence Iris Studio et co-animateur de Cinéma ta3 El 7it, la rubrique qui met en discussion films, séries, animation et imaginaires pop culture.",
-    episodeFormat: "Un film, une série, une sortie ou une actualité lance le débrief ; la discussion relie ensuite analyse des images, récit et culture pop.",
-    episode: {
-      label: "Voir l’épisode · concours du film court",
-      url: "https://www.youtube.com/watch?v=IB3UtlQdSSQ&list=PLESXjoPag9EkfPAvP5CSq8CxL881aokt5",
-    },
-    marker: "CINÉMA",
-    roleIcon: "presentation" as const,
-    portrait: "assets/rebai-chentli_80c004cc.jpg",
-    portraitAlt: "Portrait public de Rebai Chentli",
-    portraitCaption: "Portrait / direction Iris Studio",
-    source: "https://dz.linkedin.com/in/rebai-chentli-160a5332",
-    sourceLabel: "Voir le profil LinkedIn",
-    linkedin: true,
-  },
-  {
-    name: "Naoufel Amokrane",
-    role: "Senior Community Manager · Let’s Play",
-    text: "Senior Community Manager de l’équipe Let’s Play, fonction communiquée par Iris Studio. Sa carte reste volontairement sans lien professionnel afin d’éviter toute association à un homonyme non vérifié.",
-    marker: "COMMUNAUTÉ",
-    roleIcon: "community" as const,
-    portrait: "assets/naoufel-amokrane-provided_d90f66ed.jpg",
-    portraitAlt: "Portrait fourni de Naoufel Amokrane",
-    portraitCaption: "Portrait fourni / Naoufel Amokrane",
-  },
-  {
-    name: "Salim Benmokhtar",
-    role: "Design graphique · Iris Studio",
-    text: "Son profil professionnel public le présente comme Graphic Designer Senior chez Iris Studio.",
-    marker: "IMAGE",
-    roleIcon: "graphicDesign" as const,
-    portrait: "assets/salim-benmokhtar-provided_8a0bc794.png",
-    portraitAlt: "Portrait fourni de Salim Benmokhtar",
-    source: "https://dz.linkedin.com/in/salim-benmokhtar-526408365",
-    sourceLabel: "Voir le profil LinkedIn",
-    linkedin: true,
-  },
-  {
-    name: "Koussaila Ait Saada",
-    role: "Édition vidéo · Iris Studio",
-    text: "Son profil professionnel public le présente comme éditeur vidéo chez Iris Studio.",
-    marker: "MONTAGE",
-    roleIcon: "videoEditing" as const,
-    portrait: "assets/koussaila-ait-saada-provided.jpg",
-    portraitAlt: "Portrait fourni de Koussaila Ait Saada",
-    portraitCaption: "Portrait fourni / Koussaila Ait Saada",
-    source: "https://dz.linkedin.com/in/ait-saada-koussaila-153175350",
-    sourceLabel: "Voir le profil LinkedIn",
-    linkedin: true,
-  },
-  {
-    name: "Ramy Baghli",
-    role: "Co-présentateur · rubrique Easy Tech",
-    text: "Co-présentateur d’Easy Tech, une rubrique qui rend des sujets technologiques, dont l’intelligence artificielle, accessibles à la communauté Let’s Play.",
-    episodeFormat: "Un sujet technologique concret sert de point de départ, puis l’épisode le replace dans les usages du quotidien et du travail pour faciliter la discussion.",
-    episode: {
-      label: "Voir Easy Tech · l’IA avec Ramy",
-      url: "https://www.youtube.com/watch?v=0vMonbvVpZQ",
-    },
-    marker: "EASY TECH",
-    roleIcon: "presentation" as const,
-    portrait: "assets/ramy-baghli-provided_9b78f5fa.jpg",
-    portraitAlt: "Portrait fourni de Ramy Baghli",
-    portraitCaption: "Portrait fourni / Ramy Baghli",
   },
 ];
 

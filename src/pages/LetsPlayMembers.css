@@ -1,0 +1,36 @@
+/* Section membres Let’s Play : crédits éditoriaux visibles, distincts des épisodes et lisibles dans les deux thèmes. */
+.letsplay-members { position: relative; overflow: hidden; background: #171024; color: #fff9ff; }
+.letsplay-members::before { position: absolute; top: 0; right: 8%; width: 18rem; height: 18rem; border: 1px solid rgba(237, 100, 255, .22); border-radius: 50%; content: ""; transform: translateY(-45%); }
+.letsplay-members::after { position: absolute; right: 18%; bottom: 2rem; width: 8rem; height: 8rem; border: 1px solid rgba(255, 198, 51, .2); content: ""; transform: rotate(28deg); }
+.letsplay-members-heading, .letsplay-members-grid, .letsplay-members-source { position: relative; z-index: 1; }
+.letsplay-members-heading { display: grid; grid-template-columns: minmax(20rem, 1fr) minmax(16rem, .7fr); gap: clamp(2rem, 7vw, 7rem); align-items: end; border-top: 1px solid rgba(237, 100, 255, .48); padding-top: clamp(4.5rem, 9vw, 8rem); }
+.letsplay-members-heading .display-title { color: #fff9ff; }
+.letsplay-members-heading > p { max-width: 27rem; margin: 0 0 .35rem; color: rgba(255, 249, 255, .74); font-size: .82rem; line-height: 1.8; }
+.letsplay-members-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: clamp(.9rem, 1.8vw, 1.5rem); margin-top: clamp(3rem, 5vw, 5rem); }
+.letsplay-member-card { display: flex; min-height: 31rem; flex-direction: column; overflow: hidden; border: 1px solid rgba(255, 249, 255, .16); background: rgba(255, 249, 255, .06); transition: transform 220ms var(--ease-out), border-color 220ms var(--ease-out), background 220ms var(--ease-out), box-shadow 220ms var(--ease-out); }
+.letsplay-member-card:hover, .letsplay-member-card:focus-within { border-color: rgba(255, 198, 51, .75); background: rgba(255, 249, 255, .1); box-shadow: 0 .7rem 0 rgba(0, 0, 0, .18); transform: translateY(-.35rem); }
+.letsplay-member-card-top { display: flex; align-items: center; justify-content: space-between; padding: .85rem 1rem; color: #ffc633; font-size: .56rem; font-weight: 800; letter-spacing: .14em; }
+.letsplay-member-card-top svg { color: #ed64ff; }
+.letsplay-member-card-portrait { position: relative; min-height: 18rem; margin: 0; overflow: hidden; background: #0b0713; }
+.letsplay-member-card-portrait::after { position: absolute; inset: 0; background: linear-gradient(0deg, rgba(11, 7, 19, .84), rgba(11, 7, 19, 0) 58%); content: ""; }
+.letsplay-member-card-portrait img { width: 100%; height: 100%; object-fit: cover; transition: transform 340ms var(--ease-out), filter 340ms var(--ease-out); }
+.letsplay-member-card:hover .letsplay-member-card-portrait img, .letsplay-member-card:focus-within .letsplay-member-card-portrait img { filter: saturate(1.12); transform: scale(1.045); }
+.letsplay-member-card-portrait figcaption { position: absolute; z-index: 1; right: .9rem; bottom: .75rem; left: .9rem; color: rgba(255, 249, 255, .68); font-size: .49rem; font-weight: 800; letter-spacing: .1em; line-height: 1.4; text-transform: uppercase; }
+.letsplay-member-card-role { display: flex; align-items: center; gap: .45rem; min-height: 2.6rem; margin: 0; padding: .8rem 1rem 0; color: #ffc633; font-size: .57rem; font-weight: 800; letter-spacing: .07em; line-height: 1.45; text-transform: uppercase; }
+.letsplay-member-card-role svg { flex: 0 0 auto; color: #ed64ff; }
+.letsplay-member-card h3 { margin: .45rem 1rem 0; color: #fff9ff; font-family: "DM Serif Display", Georgia, serif; font-size: clamp(1.75rem, 2.5vw, 2.55rem); font-weight: 400; letter-spacing: -.055em; line-height: .93; }
+.letsplay-member-card-bio { margin: .75rem 1rem 0; color: rgba(255, 249, 255, .73); font-size: .68rem; line-height: 1.65; }
+.letsplay-member-card-episode, .letsplay-member-card-link { display: inline-flex; align-items: center; gap: .42rem; margin: auto 1rem 0; padding-top: 1rem; color: #ffc633; font-size: .59rem; font-weight: 800; letter-spacing: .05em; line-height: 1.35; text-transform: uppercase; }
+.letsplay-member-card-episode { margin-top: 1rem; border-top: 1px solid rgba(255, 249, 255, .14); }
+.letsplay-member-card-link { margin-bottom: 1rem; border-bottom: 1px solid rgba(255, 198, 51, .5); padding-bottom: .3rem; }
+.letsplay-member-card-episode span, .letsplay-member-card-link { transition: color 180ms ease, gap 180ms ease; }
+.letsplay-member-card-episode:hover, .letsplay-member-card-link:hover { color: #fff9ff; gap: .62rem; }
+.letsplay-member-card-pending { margin: auto 1rem 1rem; border-bottom: 1px solid rgba(255, 249, 255, .2); padding-bottom: .3rem; color: rgba(255, 249, 255, .48); font-size: .55rem; font-weight: 700; line-height: 1.45; }
+.letsplay-members-source { margin: clamp(2.2rem, 4vw, 3.5rem) 0 0; border-top: 1px solid rgba(255, 249, 255, .14); padding-top: .9rem; color: rgba(255, 249, 255, .48); font-size: .57rem; line-height: 1.65; }
+.dark .letsplay-members { background: #171024 !important; color: #fff9ff !important; }
+.dark .letsplay-members-heading > p, .dark .letsplay-member-card-bio, .dark .letsplay-member-card-portrait figcaption, .dark .letsplay-members-source { color: rgba(255, 249, 255, .74) !important; }
+.dark .letsplay-member-card { border-color: rgba(255, 249, 255, .18); background: rgba(255, 249, 255, .06) !important; }
+.dark .letsplay-member-card:hover, .dark .letsplay-member-card:focus-within { border-color: rgba(255, 198, 51, .78); background: rgba(255, 249, 255, .11) !important; }
+@media (max-width: 900px) { .letsplay-members-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 760px) { .letsplay-members-heading { grid-template-columns: 1fr; gap: 1.7rem; }.letsplay-members-grid { grid-template-columns: 1fr; gap: .85rem; margin-top: 2.8rem; }.letsplay-member-card { min-height: auto; }.letsplay-member-card-portrait { min-height: 19rem; }.letsplay-member-card h3 { font-size: 2rem; }.letsplay-member-card-bio { max-width: 33rem; }.letsplay-member-card-link, .letsplay-member-card-pending { margin-bottom: 1rem; } }
+@media (prefers-reduced-motion: reduce) { .letsplay-member-card, .letsplay-member-card-portrait img, .letsplay-member-card-episode, .letsplay-member-card-link { transition: none; }.letsplay-member-card:hover, .letsplay-member-card:focus-within { transform: none; }.letsplay-member-card:hover .letsplay-member-card-portrait img, .letsplay-member-card:focus-within .letsplay-member-card-portrait img { transform: none; } }
