@@ -7,5 +7,6 @@ export default defineConfig({
   base: process.env.VITE_BASE_PATH || "/",
   plugins: [react(), tailwindcss()],
   preview: { allowedHosts: true },
+  server: { allowedHosts: true },
   resolve: { alias: { "@": path.resolve(import.meta.dirname, "src") } },
 });
